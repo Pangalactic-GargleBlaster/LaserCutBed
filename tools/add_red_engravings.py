@@ -2,8 +2,8 @@
 import hashlib, json, os, sys
 from collections import defaultdict
 import xml.etree.ElementTree as ET
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))),
-                                'tools', 'manufacturing'))
+from shared_paths import design_system_root
+sys.path.insert(0, str(design_system_root() / 'tools' / 'manufacturing'))
 from dxf_engraving import add_to_dxf, placed
 from vector_filigree import read_svg, to_polyline
 

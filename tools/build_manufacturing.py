@@ -11,10 +11,12 @@ import sys
 import tempfile
 import zipfile
 
+from shared_paths import design_system_root
+
 
 BED = Path(__file__).resolve().parent.parent
 TOOLS = BED / "tools"
-SHARED = BED.parent / "tools" / "manufacturing"
+SHARED = design_system_root() / "tools" / "manufacturing"
 CONFIG = BED / "packing_config.json"
 FREECAD = Path(os.environ.get("FREECAD_CMD") or shutil.which("FreeCADCmd") or
                shutil.which("freecadcmd") or
@@ -27,7 +29,7 @@ def run(label, command, environment, log_dir):
     print(label, flush=True)
     log = log_dir / (label.lower().replace(" ", "_") + ".log")
     with log.open("w") as stream:
-        result = subprocess.run(command, cwd=BED.parent, env=environment,
+        result = subprocess.run(command, cwd=BED, env=environment,
                                 stdout=stream, stderr=subprocess.STDOUT)
     output = log.read_text(errors="replace")
     if result.returncode or "Traceback (most recent call last)" in output:

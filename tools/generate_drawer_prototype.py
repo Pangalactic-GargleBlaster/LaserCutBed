@@ -13,7 +13,8 @@ import Part
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(SCRIPT_DIR)
-PROJECT_ROOT = os.path.dirname(ROOT)
+from shared_paths import design_system_root
+PROJECT_ROOT = str(design_system_root())
 MODULE_DIR = os.path.join(PROJECT_ROOT, "freecad", "DesignSystem")
 if MODULE_DIR not in sys.path:
     sys.path.insert(0, MODULE_DIR)

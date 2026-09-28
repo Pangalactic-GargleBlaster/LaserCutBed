@@ -1,0 +1,20 @@
+min_version = "2026.8.8"
+
+[tools]
+python = "3.13"
+
+[tasks.generate]
+description = "Regenerate Bed.FCStd"
+run = "python3 tools/run_freecad.py tools/generate_bed.py"
+
+[tasks.overlaps]
+description = "Check final body shapes for positive-volume overlaps"
+run = "python3 tools/run_freecad.py --shared check_overlaps.py Bed.FCStd"
+
+[tasks.symmetry]
+description = "Audit final bodies for in-plane symmetry"
+run = "python3 tools/run_freecad.py --shared audit_panel_symmetry.py Bed.FCStd"
+
+[tasks.manufacturing]
+description = "Build and validate laser DXFs and sheet layout"
+run = "python3 tools/build_manufacturing.py"

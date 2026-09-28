@@ -1,39 +1,25 @@
 # Bed project
 
-`Bed.FCStd` is the current parametric bed model. `design_parameters.json`
-contains its generation inputs. `prototypes/` holds earlier cabinet and drawer
-studies; `assets/` contains the filigree sources.
+`Bed.FCStd` is the current parametric model. `tools/generate_bed.py` builds it
+from `design_parameters.json`; `packing_config.json` describes the bodies and
+assembly groups used for laser sheet layout.
 
-`tools/generate_bed.py` builds the model with the shared FreeCAD panel and
-finger-joint code in `../freecad/DesignSystem/`. The Bed generation and
-engraving-placement scripts stay here because they encode this bed's structure
-and artwork.
+The reusable FreeCAD workbench and manufacturing tools are in the
+[Design System](https://github.com/Pangalactic-GargleBlaster/FreeCAD-Laser-Cutting-Design-System)
+repository. Initialize the `design-system` submodule after cloning, or set
+`DESIGN_SYSTEM_ROOT` to a separate checkout of that repository.
 
-`packing_config.json` names this project's 320 bodies, nested drawer faces,
-cabinet-side stacks, laminated pairs, and assembly groups. It also
-sets 1193.8 × 787.4 mm usable panels and a 5 mm rectangular-part gap. The
-packing and DXF code that consumes it lives in `../tools/manufacturing/`.
-Update the config when body names or assembly groups change. Every independent
-body must appear in exactly one `packing_groups` entry.
-
-## Checks and manufacturing
-
-From the repository root, run:
+From this repository's root:
 
 ```text
-mise run bed:generate
-mise run bed:overlaps
-mise run bed:symmetry
-python3 Bed/tools/build_manufacturing.py --check-only
-python3 Bed/tools/build_manufacturing.py
+python3 tools/run_freecad.py tools/generate_bed.py
+python3 tools/run_freecad.py --shared check_overlaps.py Bed.FCStd
+python3 tools/run_freecad.py --shared audit_panel_symmetry.py Bed.FCStd
+python3 tools/build_manufacturing.py --check-only
+python3 tools/build_manufacturing.py
 ```
 
-The last command publishes `manufacturing/`; `--check-only` builds and
-validates in a temporary directory. Set `FREECAD_CMD` to the FreeCADCmd path if
-it is not on `PATH`. The publication script exports one face-up DXF per body,
-packs the sheets using the configured nesting and groups, builds sheet DXFs and
-SVG maps, adds Bed filigree engravings, checks counts and thicknesses, and
-creates an archive. Read `manufacturing/README.txt` before cutting.
-
-`manufacturing/` reflects the last published build. Rebuild it after model
-changes before using its files to manufacture parts.
+The manufacturing script reads the current saved `Bed.FCStd`; it does not
+regenerate or change the model. It exports face-up DXFs, places parts on
+1193.8 × 787.4 mm sheets, adds filigree engravings, and publishes validated
+files in `manufacturing/`. Rebuild those files after changing the model.
