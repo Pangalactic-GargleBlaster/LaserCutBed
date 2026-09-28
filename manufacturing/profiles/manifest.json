@@ -15,10 +15,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.80000000000058,
+    "thickness_mm": 5.800000000000466,
     "width_mm": 969.1999999999998,
     "height_mm": 766.0,
-    "area_mm2": 713569.5150381718,
+    "area_mm2": 713569.5150382777,
     "wire_count": 7,
     "edge_count": 130,
     "dxf_file": "profiles/Cabinet1TopOuterBody.dxf"
@@ -39,10 +39,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000002058,
+    "thickness_mm": 5.80000000000183,
     "width_mm": 969.1999999999998,
     "height_mm": 766.0,
-    "area_mm2": 713569.5150382494,
+    "area_mm2": 713569.5150382719,
     "wire_count": 7,
     "edge_count": 130,
     "dxf_file": "profiles/Cabinet1TopInnerBody.dxf"
@@ -63,12 +63,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000000011,
-    "width_mm": 969.2000000000005,
-    "height_mm": 359.6000000000001,
-    "area_mm2": 333650.9359265354,
+    "thickness_mm": 5.8000000000000425,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.5999999999997,
+    "area_mm2": 333783.7791118413,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet1LowerSideOuterBody.dxf"
   },
   {
@@ -87,12 +87,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.8000000000000425,
-    "width_mm": 969.200000000001,
-    "height_mm": 359.5999999999987,
-    "area_mm2": 333650.9359265325,
+    "thickness_mm": 5.800000000000085,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.5999999999997,
+    "area_mm2": 333783.7791118382,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet1LowerSideInnerBody.dxf"
   },
   {
@@ -111,12 +111,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.8000000000054115,
-    "width_mm": 969.2000000000007,
-    "height_mm": 359.59999999999866,
-    "area_mm2": 333562.5786328714,
+    "thickness_mm": 5.800000000005639,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.5999999999996,
+    "area_mm2": 333695.4218181884,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet1UpperSideOuterBody.dxf"
   },
   {
@@ -136,11 +136,11 @@
       1.0
     ],
     "thickness_mm": 5.8000000000017735,
-    "width_mm": 969.2000000000005,
-    "height_mm": 359.59999999999883,
-    "area_mm2": 333562.5786328524,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.6000000000001,
+    "area_mm2": 333695.4218182278,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet1UpperSideInnerBody.dxf"
   },
   {
@@ -159,12 +159,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000007458,
-    "width_mm": 766.0,
+    "thickness_mm": 5.800000000002001,
+    "width_mm": 766.0000000000008,
     "height_mm": 359.6,
-    "area_mm2": 260163.9545592411,
+    "area_mm2": 259853.58500368366,
     "wire_count": 7,
-    "edge_count": 120,
+    "edge_count": 112,
     "dxf_file": "profiles/Cabinet1BackOuterBody.dxf"
   },
   {
@@ -183,12 +183,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000005639,
-    "width_mm": 766.0,
-    "height_mm": 359.6000000000001,
-    "area_mm2": 260163.95455946846,
+    "thickness_mm": 5.8000000000017735,
+    "width_mm": 766.0000000000023,
+    "height_mm": 359.5999999999997,
+    "area_mm2": 259853.58500374123,
     "wire_count": 7,
-    "edge_count": 120,
+    "edge_count": 112,
     "dxf_file": "profiles/Cabinet1BackInnerBody.dxf"
   },
   {
@@ -207,10 +207,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000000004,
+    "thickness_mm": 5.800000000000009,
     "width_mm": 154.39999999999998,
-    "height_mm": 766.0000000000008,
-    "area_mm2": 111040.65274122868,
+    "height_mm": 766.0000000000023,
+    "area_mm2": 111040.6527412287,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet1FrontBottomStripOuterBody.dxf"
@@ -231,10 +231,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000000018,
+    "thickness_mm": 5.800000000000035,
     "width_mm": 154.39999999999998,
-    "height_mm": 765.9999999999997,
-    "area_mm2": 111040.65274122846,
+    "height_mm": 766.0000000000007,
+    "area_mm2": 111040.65274122819,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet1FrontBottomStripInnerBody.dxf"
@@ -255,12 +255,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 166.0000000000009,
-    "height_mm": 765.9999999999997,
-    "area_mm2": 119612.44955592186,
+    "thickness_mm": 5.800000000000018,
+    "width_mm": 154.4000000000001,
+    "height_mm": 766.0000000000007,
+    "area_mm2": 111040.6527412283,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet1BackBottomStripOuterBody.dxf"
   },
   {
@@ -279,12 +279,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 166.00000000000068,
-    "height_mm": 765.9999999999978,
-    "area_mm2": 119612.44955592164,
+    "thickness_mm": 5.800000000000016,
+    "width_mm": 154.4000000000001,
+    "height_mm": 766.0000000000003,
+    "area_mm2": 111040.65274122861,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet1BackBottomStripInnerBody.dxf"
   },
   {
@@ -303,10 +303,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000001091,
+    "thickness_mm": 5.800000000001319,
     "width_mm": 969.1999999999998,
     "height_mm": 766.0,
-    "area_mm2": 713569.5150379691,
+    "area_mm2": 713569.515037886,
     "wire_count": 7,
     "edge_count": 130,
     "dxf_file": "profiles/Cabinet2TopOuterBody.dxf"
@@ -327,10 +327,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.80000000000183,
+    "thickness_mm": 5.8000000000014325,
     "width_mm": 969.1999999999998,
     "height_mm": 766.0,
-    "area_mm2": 713569.5150382684,
+    "area_mm2": 713569.5150382431,
     "wire_count": 7,
     "edge_count": 130,
     "dxf_file": "profiles/Cabinet2TopInnerBody.dxf"
@@ -351,12 +351,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.8000000000000185,
-    "width_mm": 969.1999999999996,
-    "height_mm": 359.60000000000014,
-    "area_mm2": 333650.93592653493,
+    "thickness_mm": 5.800000000000025,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.5999999999997,
+    "area_mm2": 333783.7791118423,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet2LowerSideOuterBody.dxf"
   },
   {
@@ -375,12 +375,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.8000000000000265,
-    "width_mm": 969.2000000000014,
-    "height_mm": 359.5999999999993,
-    "area_mm2": 333650.93592653354,
+    "thickness_mm": 5.800000000000037,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.5999999999987,
+    "area_mm2": 333783.7791118401,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet2LowerSideInnerBody.dxf"
   },
   {
@@ -399,12 +399,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000006094,
-    "width_mm": 969.2000000000016,
-    "height_mm": 359.5999999999992,
-    "area_mm2": 333562.57863290294,
+    "thickness_mm": 5.800000000002456,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.59999999999866,
+    "area_mm2": 333695.42181827856,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet2UpperSideOuterBody.dxf"
   },
   {
@@ -423,12 +423,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000001205,
-    "width_mm": 969.1999999999953,
-    "height_mm": 359.59999999999917,
-    "area_mm2": 333562.5786330737,
+    "thickness_mm": 5.800000000001546,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.59999999999894,
+    "area_mm2": 333695.421818326,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet2UpperSideInnerBody.dxf"
   },
   {
@@ -447,12 +447,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000002456,
-    "width_mm": 766.0,
+    "thickness_mm": 5.800000000004957,
+    "width_mm": 766.0000000000002,
     "height_mm": 359.6,
-    "area_mm2": 260163.9545595487,
+    "area_mm2": 259853.5850036189,
     "wire_count": 7,
-    "edge_count": 120,
+    "edge_count": 112,
     "dxf_file": "profiles/Cabinet2BackOuterBody.dxf"
   },
   {
@@ -471,12 +471,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000006776,
-    "width_mm": 766.0,
-    "height_mm": 359.60000000000014,
-    "area_mm2": 260163.95455939148,
+    "thickness_mm": 5.800000000001546,
+    "width_mm": 765.9999999999991,
+    "height_mm": 359.5999999999997,
+    "area_mm2": 259853.5850037034,
     "wire_count": 7,
-    "edge_count": 120,
+    "edge_count": 112,
     "dxf_file": "profiles/Cabinet2BackInnerBody.dxf"
   },
   {
@@ -495,10 +495,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000000004,
+    "thickness_mm": 5.8000000000000105,
     "width_mm": 154.4000000000001,
-    "height_mm": 765.9999999999981,
-    "area_mm2": 111040.65274122858,
+    "height_mm": 765.9999999999991,
+    "area_mm2": 111040.65274122868,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet2FrontBottomStripOuterBody.dxf"
@@ -519,10 +519,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000000012,
+    "thickness_mm": 5.80000000000001,
     "width_mm": 154.4000000000001,
-    "height_mm": 765.9999999999993,
-    "area_mm2": 111040.65274122854,
+    "height_mm": 765.9999999999992,
+    "area_mm2": 111040.65274122871,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet2FrontBottomStripInnerBody.dxf"
@@ -543,12 +543,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 165.99999999999545,
-    "height_mm": 765.9999999999993,
-    "area_mm2": 119612.44955591968,
+    "thickness_mm": 5.800000000000014,
+    "width_mm": 154.4000000000001,
+    "height_mm": 765.9999999999992,
+    "area_mm2": 111040.6527412283,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet2BackBottomStripOuterBody.dxf"
   },
   {
@@ -567,12 +567,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 165.99999999999955,
-    "height_mm": 766.0000000000015,
-    "area_mm2": 119612.44955592132,
+    "thickness_mm": 5.800000000000025,
+    "width_mm": 154.4000000000001,
+    "height_mm": 765.9999999999966,
+    "area_mm2": 111040.65274122824,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet2BackBottomStripInnerBody.dxf"
   },
   {
@@ -591,10 +591,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000001148,
+    "thickness_mm": 5.800000000001205,
     "width_mm": 969.1999999999998,
     "height_mm": 766.0,
-    "area_mm2": 713569.5150381413,
+    "area_mm2": 713569.5150381719,
     "wire_count": 7,
     "edge_count": 130,
     "dxf_file": "profiles/Cabinet3TopOuterBody.dxf"
@@ -615,10 +615,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000002228,
+    "thickness_mm": 5.80000000000183,
     "width_mm": 969.1999999999998,
     "height_mm": 766.0,
-    "area_mm2": 713569.5150382317,
+    "area_mm2": 713569.5150382697,
     "wire_count": 7,
     "edge_count": 130,
     "dxf_file": "profiles/Cabinet3TopInnerBody.dxf"
@@ -639,12 +639,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000003365,
-    "width_mm": 969.1999999999987,
-    "height_mm": 359.6,
-    "area_mm2": 333562.5786328927,
+    "thickness_mm": 5.800000000005639,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.5999999999998,
+    "area_mm2": 333695.42181813455,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet3LowerSideOuterBody.dxf"
   },
   {
@@ -663,12 +663,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000004957,
-    "width_mm": 969.2000000000021,
-    "height_mm": 359.5999999999993,
-    "area_mm2": 333562.5786327018,
+    "thickness_mm": 5.800000000003251,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.59999999999957,
+    "area_mm2": 333695.4218181817,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet3LowerSideInnerBody.dxf"
   },
   {
@@ -687,12 +687,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000008822,
-    "width_mm": 969.2000000000021,
-    "height_mm": 359.5999999999993,
-    "area_mm2": 333562.57863274834,
+    "thickness_mm": 5.800000000011551,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.59999999999957,
+    "area_mm2": 333695.4218179797,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet3UpperSideOuterBody.dxf"
   },
   {
@@ -711,12 +711,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000007003,
-    "width_mm": 969.1999999999985,
-    "height_mm": 359.59999999999934,
-    "area_mm2": 333562.57863247243,
+    "thickness_mm": 5.800000000009732,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.6000000000001,
+    "area_mm2": 333695.42181772704,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet3UpperSideInnerBody.dxf"
   },
   {
@@ -735,12 +735,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000006776,
-    "width_mm": 766.0,
+    "thickness_mm": 5.800000000002228,
+    "width_mm": 766.0000000000018,
     "height_mm": 359.6,
-    "area_mm2": 260163.95455919375,
+    "area_mm2": 259853.5850036836,
     "wire_count": 7,
-    "edge_count": 120,
+    "edge_count": 112,
     "dxf_file": "profiles/Cabinet3BackOuterBody.dxf"
   },
   {
@@ -759,12 +759,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000004729,
-    "width_mm": 766.0,
-    "height_mm": 359.6000000000001,
-    "area_mm2": 260163.95455950507,
+    "thickness_mm": 5.800000000003138,
+    "width_mm": 766.0000000000049,
+    "height_mm": 359.59999999999985,
+    "area_mm2": 259853.5850037213,
     "wire_count": 7,
-    "edge_count": 120,
+    "edge_count": 112,
     "dxf_file": "profiles/Cabinet3BackInnerBody.dxf"
   },
   {
@@ -783,10 +783,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000000023,
+    "thickness_mm": 5.800000000000025,
     "width_mm": 154.39999999999998,
-    "height_mm": 765.9999999999999,
-    "area_mm2": 111040.6527412281,
+    "height_mm": 766.000000000005,
+    "area_mm2": 111040.65274122842,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet3FrontBottomStripOuterBody.dxf"
@@ -807,10 +807,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000000021,
+    "thickness_mm": 5.8000000000000425,
     "width_mm": 154.39999999999998,
-    "height_mm": 765.999999999997,
-    "area_mm2": 111040.65274122822,
+    "height_mm": 766.0000000000014,
+    "area_mm2": 111040.65274122798,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet3FrontBottomStripInnerBody.dxf"
@@ -831,12 +831,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 165.99999999999886,
-    "height_mm": 765.999999999997,
-    "area_mm2": 119612.44955592086,
+    "thickness_mm": 5.800000000000014,
+    "width_mm": 154.4000000000001,
+    "height_mm": 766.0000000000014,
+    "area_mm2": 111040.65274122852,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet3BackBottomStripOuterBody.dxf"
   },
   {
@@ -855,12 +855,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 165.99999999999704,
-    "height_mm": 765.9999999999956,
-    "area_mm2": 119612.44955591983,
+    "thickness_mm": 5.800000000000031,
+    "width_mm": 154.4000000000001,
+    "height_mm": 766.0000000000026,
+    "area_mm2": 111040.65274122855,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet3BackBottomStripInnerBody.dxf"
   },
   {
@@ -879,10 +879,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000001546,
+    "thickness_mm": 5.800000000001603,
     "width_mm": 969.1999999999998,
     "height_mm": 766.0,
-    "area_mm2": 713569.5150378762,
+    "area_mm2": 713569.515037868,
     "wire_count": 7,
     "edge_count": 130,
     "dxf_file": "profiles/Cabinet4TopOuterBody.dxf"
@@ -903,10 +903,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000001603,
+    "thickness_mm": 5.800000000001546,
     "width_mm": 969.1999999999998,
     "height_mm": 766.0,
-    "area_mm2": 713569.515038269,
+    "area_mm2": 713569.5150382391,
     "wire_count": 7,
     "edge_count": 130,
     "dxf_file": "profiles/Cabinet4TopInnerBody.dxf"
@@ -927,12 +927,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000001091,
-    "width_mm": 969.2,
-    "height_mm": 359.6000000000001,
-    "area_mm2": 333562.57863311126,
+    "thickness_mm": 5.800000000002342,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.59999999999997,
+    "area_mm2": 333695.4218183607,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet4LowerSideOuterBody.dxf"
   },
   {
@@ -951,12 +951,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000003479,
-    "width_mm": 969.2000000000007,
-    "height_mm": 359.59999999999917,
-    "area_mm2": 333562.57863286376,
+    "thickness_mm": 5.800000000003706,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.59999999999894,
+    "area_mm2": 333695.4218182459,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet4LowerSideInnerBody.dxf"
   },
   {
@@ -975,12 +975,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000004047,
-    "width_mm": 969.2000000000007,
-    "height_mm": 359.59999999999917,
-    "area_mm2": 333562.57863290457,
+    "thickness_mm": 5.800000000008822,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.59999999999894,
+    "area_mm2": 333695.4218181151,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet4UpperSideOuterBody.dxf"
   },
   {
@@ -999,12 +999,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000001546,
-    "width_mm": 969.1999999999969,
-    "height_mm": 359.5999999999991,
-    "area_mm2": 333562.5786328431,
+    "thickness_mm": 5.800000000004502,
+    "width_mm": 969.1999999999998,
+    "height_mm": 359.59999999999917,
+    "area_mm2": 333695.4218181037,
     "wire_count": 7,
-    "edge_count": 139,
+    "edge_count": 142,
     "dxf_file": "profiles/Cabinet4UpperSideInnerBody.dxf"
   },
   {
@@ -1023,12 +1023,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000006776,
-    "width_mm": 766.0,
+    "thickness_mm": 5.800000000006094,
+    "width_mm": 766.0000000000009,
     "height_mm": 359.6,
-    "area_mm2": 260163.95455936744,
+    "area_mm2": 259853.58500358486,
     "wire_count": 7,
-    "edge_count": 120,
+    "edge_count": 112,
     "dxf_file": "profiles/Cabinet4BackOuterBody.dxf"
   },
   {
@@ -1047,12 +1047,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000011551,
-    "width_mm": 766.0,
-    "height_mm": 359.60000000000014,
-    "area_mm2": 260163.95455920842,
+    "thickness_mm": 5.800000000001546,
+    "width_mm": 765.9999999999985,
+    "height_mm": 359.6,
+    "area_mm2": 259853.58500371696,
     "wire_count": 7,
-    "edge_count": 120,
+    "edge_count": 112,
     "dxf_file": "profiles/Cabinet4BackInnerBody.dxf"
   },
   {
@@ -1071,10 +1071,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8000000000000105,
+    "thickness_mm": 5.800000000000008,
     "width_mm": 154.4000000000001,
-    "height_mm": 765.9999999999968,
-    "area_mm2": 111040.65274122827,
+    "height_mm": 765.9999999999986,
+    "area_mm2": 111040.6527412285,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet4FrontBottomStripOuterBody.dxf"
@@ -1095,10 +1095,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000000012,
+    "thickness_mm": 5.800000000000022,
     "width_mm": 154.4000000000001,
-    "height_mm": 765.9999999999986,
-    "area_mm2": 111040.65274122852,
+    "height_mm": 765.9999999999999,
+    "area_mm2": 111040.65274122833,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet4FrontBottomStripInnerBody.dxf"
@@ -1119,12 +1119,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 165.99999999999727,
-    "height_mm": 765.9999999999986,
-    "area_mm2": 119612.44955592028,
+    "thickness_mm": 5.8000000000000185,
+    "width_mm": 154.4000000000001,
+    "height_mm": 765.9999999999999,
+    "area_mm2": 111040.65274122824,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet4BackBottomStripOuterBody.dxf"
   },
   {
@@ -1143,12 +1143,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 166.0000000000016,
-    "height_mm": 766.0000000000032,
-    "area_mm2": 119612.44955592213,
+    "thickness_mm": 5.80000000000002,
+    "width_mm": 154.4000000000001,
+    "height_mm": 765.9999999999953,
+    "area_mm2": 111040.65274122827,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet4BackBottomStripInnerBody.dxf"
   },
   {
@@ -1167,10 +1167,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000001489,
+    "thickness_mm": 5.800000000001148,
     "width_mm": 969.1999999999998,
     "height_mm": 512.0,
-    "area_mm2": 476310.71503818315,
+    "area_mm2": 476310.715038239,
     "wire_count": 3,
     "edge_count": 114,
     "dxf_file": "profiles/Cabinet5TopOuterBody.dxf"
@@ -1191,10 +1191,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000001091,
+    "thickness_mm": 5.800000000002058,
     "width_mm": 969.1999999999998,
     "height_mm": 512.0,
-    "area_mm2": 476310.71503831295,
+    "area_mm2": 476310.7150382254,
     "wire_count": 3,
     "edge_count": 114,
     "dxf_file": "profiles/Cabinet5TopInnerBody.dxf"
@@ -1215,12 +1215,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000003536,
-    "width_mm": 511.9999999999993,
-    "height_mm": 359.59999999999997,
-    "area_mm2": 174348.88730084547,
+    "thickness_mm": 5.800000000003251,
+    "width_mm": 512.0,
+    "height_mm": 359.60000000000036,
+    "area_mm2": 174481.73048616014,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet5LeftSideOuterBody.dxf"
   },
   {
@@ -1239,12 +1239,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000002683,
-    "width_mm": 511.9999999999975,
-    "height_mm": 359.60000000000036,
-    "area_mm2": 174348.8873008258,
+    "thickness_mm": 5.800000000003024,
+    "width_mm": 512.0,
+    "height_mm": 359.60000000000065,
+    "area_mm2": 174481.73048613314,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet5LeftSideInnerBody.dxf"
   },
   {
@@ -1263,12 +1263,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000002228,
-    "width_mm": 511.9999999999975,
-    "height_mm": 359.60000000000036,
-    "area_mm2": 174348.88730075595,
+    "thickness_mm": 5.8000000000072305,
+    "width_mm": 512.0,
+    "height_mm": 359.60000000000065,
+    "area_mm2": 174481.73048600953,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet5RightSideOuterBody.dxf"
   },
   {
@@ -1287,12 +1287,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000009277,
-    "width_mm": 511.9999999999998,
-    "height_mm": 359.59999999999906,
-    "area_mm2": 174348.88730073225,
+    "thickness_mm": 5.800000000002001,
+    "width_mm": 512.0,
+    "height_mm": 359.59999999999883,
+    "area_mm2": 174481.73048609437,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet5RightSideInnerBody.dxf"
   },
   {
@@ -1311,12 +1311,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.80000000000291,
-    "width_mm": 969.1999999999998,
-    "height_mm": 359.59999999999997,
-    "area_mm2": 330590.6345594925,
+    "thickness_mm": 5.7999999999999545,
+    "width_mm": 969.1999999999978,
+    "height_mm": 359.6,
+    "area_mm2": 330280.2650037504,
     "wire_count": 5,
-    "edge_count": 112,
+    "edge_count": 104,
     "dxf_file": "profiles/Cabinet5BackOuterBody.dxf"
   },
   {
@@ -1335,12 +1335,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000006548,
-    "width_mm": 969.1999999999998,
-    "height_mm": 359.59999999999997,
-    "area_mm2": 330590.6345594247,
+    "thickness_mm": 5.7999999999999545,
+    "width_mm": 969.1999999999994,
+    "height_mm": 359.60000000000036,
+    "area_mm2": 330280.2650037638,
     "wire_count": 5,
-    "edge_count": 112,
+    "edge_count": 104,
     "dxf_file": "profiles/Cabinet5BackInnerBody.dxf"
   },
   {
@@ -1359,12 +1359,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 969.1999999999953,
-    "height_mm": 166.0,
-    "area_mm2": 151961.8895559209,
+    "thickness_mm": 5.800000000000013,
+    "width_mm": 969.1999999999967,
+    "height_mm": 154.4000000000001,
+    "area_mm2": 141032.972741228,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet5BackBottomStripOuterBody.dxf"
   },
   {
@@ -1383,12 +1383,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 969.1999999999953,
-    "height_mm": 166.00000000000045,
-    "area_mm2": 151961.88955592105,
+    "thickness_mm": 5.800000000000009,
+    "width_mm": 969.1999999999973,
+    "height_mm": 154.4000000000001,
+    "area_mm2": 141032.97274122827,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet5BackBottomStripInnerBody.dxf"
   },
   {
@@ -1408,9 +1408,9 @@
       0.0
     ],
     "thickness_mm": 5.8,
-    "width_mm": 969.1999999999935,
+    "width_mm": 969.1999999999992,
     "height_mm": 152.4000000000001,
-    "area_mm2": 145563.15681469237,
+    "area_mm2": 145563.15681469275,
     "wire_count": 3,
     "edge_count": 54,
     "dxf_file": "profiles/Cabinet5FrontBottomStripOuterBody.dxf"
@@ -1432,9 +1432,9 @@
       0.0
     ],
     "thickness_mm": 5.8,
-    "width_mm": 969.1999999999953,
+    "width_mm": 969.1999999999967,
     "height_mm": 152.4000000000001,
-    "area_mm2": 145563.15681469257,
+    "area_mm2": 145563.1568146924,
     "wire_count": 3,
     "edge_count": 54,
     "dxf_file": "profiles/Cabinet5FrontBottomStripInnerBody.dxf"
@@ -1455,10 +1455,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000001603,
+    "thickness_mm": 5.8000000000017735,
     "width_mm": 969.1999999999998,
     "height_mm": 512.0,
-    "area_mm2": 476310.7150380804,
+    "area_mm2": 476310.71503811557,
     "wire_count": 3,
     "edge_count": 114,
     "dxf_file": "profiles/Cabinet6TopOuterBody.dxf"
@@ -1479,10 +1479,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000001148,
+    "thickness_mm": 5.800000000002058,
     "width_mm": 969.1999999999998,
     "height_mm": 512.0,
-    "area_mm2": 476310.7150383039,
+    "area_mm2": 476310.7150382406,
     "wire_count": 3,
     "edge_count": 114,
     "dxf_file": "profiles/Cabinet6TopInnerBody.dxf"
@@ -1503,12 +1503,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000006321,
-    "width_mm": 511.9999999999993,
-    "height_mm": 359.5999999999999,
-    "area_mm2": 174348.88730070269,
+    "thickness_mm": 5.8000000000054115,
+    "width_mm": 512.0,
+    "height_mm": 359.6000000000004,
+    "area_mm2": 174481.73048598962,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet6LeftSideOuterBody.dxf"
   },
   {
@@ -1527,12 +1527,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000003365,
-    "width_mm": 511.9999999999975,
-    "height_mm": 359.60000000000036,
-    "area_mm2": 174348.8873007856,
+    "thickness_mm": 5.8000000000072305,
+    "width_mm": 512.0,
+    "height_mm": 359.60000000000053,
+    "area_mm2": 174481.7304860115,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet6LeftSideInnerBody.dxf"
   },
   {
@@ -1551,12 +1551,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000003365,
-    "width_mm": 511.9999999999975,
-    "height_mm": 359.6000000000004,
-    "area_mm2": 174348.88730067882,
+    "thickness_mm": 5.800000000005184,
+    "width_mm": 512.0,
+    "height_mm": 359.6000000000005,
+    "area_mm2": 174481.73048577263,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet6RightSideOuterBody.dxf"
   },
   {
@@ -1575,12 +1575,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000019281,
-    "width_mm": 512.0000000000014,
-    "height_mm": 359.5999999999989,
-    "area_mm2": 174348.88730046124,
+    "thickness_mm": 5.800000000014279,
+    "width_mm": 512.0,
+    "height_mm": 359.5999999999991,
+    "area_mm2": 174481.73048601844,
     "wire_count": 5,
-    "edge_count": 137,
+    "edge_count": 140,
     "dxf_file": "profiles/Cabinet6RightSideInnerBody.dxf"
   },
   {
@@ -1599,12 +1599,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000004729,
-    "width_mm": 969.1999999999998,
+    "thickness_mm": 5.7999999999999545,
+    "width_mm": 969.1999999999982,
     "height_mm": 359.59999999999997,
-    "area_mm2": 330590.6345593918,
+    "area_mm2": 330280.26500379364,
     "wire_count": 5,
-    "edge_count": 112,
+    "edge_count": 104,
     "dxf_file": "profiles/Cabinet6BackOuterBody.dxf"
   },
   {
@@ -1623,12 +1623,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.8000000000072305,
-    "width_mm": 969.1999999999998,
-    "height_mm": 359.5999999999999,
-    "area_mm2": 330590.63455938484,
+    "thickness_mm": 5.7999999999999545,
+    "width_mm": 969.1999999999941,
+    "height_mm": 359.60000000000036,
+    "area_mm2": 330280.265003737,
     "wire_count": 5,
-    "edge_count": 112,
+    "edge_count": 104,
     "dxf_file": "profiles/Cabinet6BackInnerBody.dxf"
   },
   {
@@ -1647,12 +1647,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 969.1999999999964,
-    "height_mm": 166.0000000000016,
-    "area_mm2": 151961.88955592172,
+    "thickness_mm": 5.800000000000001,
+    "width_mm": 969.19999999999,
+    "height_mm": 154.4000000000001,
+    "area_mm2": 141032.97274122798,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet6BackBottomStripOuterBody.dxf"
   },
   {
@@ -1671,12 +1671,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 969.1999999999948,
-    "height_mm": 166.00000000000023,
-    "area_mm2": 151961.8895559209,
+    "thickness_mm": 5.800000000000011,
+    "width_mm": 969.1999999999916,
+    "height_mm": 154.4000000000001,
+    "area_mm2": 141032.9727412277,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet6BackBottomStripInnerBody.dxf"
   },
   {
@@ -1696,7 +1696,7 @@
       0.0
     ],
     "thickness_mm": 5.8,
-    "width_mm": 969.1999999999925,
+    "width_mm": 969.1999999999944,
     "height_mm": 152.4000000000001,
     "area_mm2": 145563.15681469237,
     "wire_count": 3,
@@ -1720,9 +1720,9 @@
       0.0
     ],
     "thickness_mm": 5.8,
-    "width_mm": 969.1999999999964,
+    "width_mm": 969.19999999999,
     "height_mm": 152.4000000000001,
-    "area_mm2": 145563.15681469263,
+    "area_mm2": 145563.15681469216,
     "wire_count": 3,
     "edge_count": 54,
     "dxf_file": "profiles/Cabinet6FrontBottomStripInnerBody.dxf"
@@ -1743,10 +1743,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8000000000017735,
+    "thickness_mm": 5.800000000000296,
     "width_mm": 512.0,
     "height_mm": 512.0,
-    "area_mm2": 248442.23503830066,
+    "area_mm2": 248442.23503831236,
     "wire_count": 3,
     "edge_count": 114,
     "dxf_file": "profiles/Cabinet7TopOuterBody.dxf"
@@ -1767,10 +1767,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.80000000000166,
+    "thickness_mm": 5.8000000000010346,
     "width_mm": 512.0,
     "height_mm": 512.0,
-    "area_mm2": 248442.23503831317,
+    "area_mm2": 248442.2350383043,
     "wire_count": 3,
     "edge_count": 114,
     "dxf_file": "profiles/Cabinet7TopInnerBody.dxf"
@@ -1791,12 +1791,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000000029,
-    "width_mm": 511.99999999999864,
-    "height_mm": 359.5999999999997,
-    "area_mm2": 173152.07859100492,
+    "thickness_mm": 5.800000000000039,
+    "width_mm": 512.0,
+    "height_mm": 359.59999999999985,
+    "area_mm2": 173284.92177631162,
     "wire_count": 9,
-    "edge_count": 141,
+    "edge_count": 144,
     "dxf_file": "profiles/Cabinet7LeftSideOuterBody.dxf"
   },
   {
@@ -1815,12 +1815,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.80000000000006,
-    "width_mm": 511.99999999999704,
-    "height_mm": 359.59999999999934,
-    "area_mm2": 173152.0785910039,
+    "thickness_mm": 5.8000000000000655,
+    "width_mm": 512.0,
+    "height_mm": 359.5999999999987,
+    "area_mm2": 173284.92177631133,
     "wire_count": 9,
-    "edge_count": 141,
+    "edge_count": 144,
     "dxf_file": "profiles/Cabinet7LeftSideInnerBody.dxf"
   },
   {
@@ -1839,12 +1839,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000004275,
-    "width_mm": 511.99999999999704,
-    "height_mm": 359.59999999999945,
-    "area_mm2": 173063.72129750036,
+    "thickness_mm": 5.800000000004218,
+    "width_mm": 512.0,
+    "height_mm": 359.5999999999988,
+    "area_mm2": 173196.5644827783,
     "wire_count": 11,
-    "edge_count": 143,
+    "edge_count": 146,
     "dxf_file": "profiles/Cabinet7RightSideOuterBody.dxf"
   },
   {
@@ -1863,12 +1863,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000001546,
-    "width_mm": 511.9999999999966,
-    "height_mm": 359.59999999999934,
-    "area_mm2": 173063.72129755857,
+    "thickness_mm": 5.800000000002001,
+    "width_mm": 512.0,
+    "height_mm": 359.59999999999843,
+    "area_mm2": 173196.5644828467,
     "wire_count": 11,
-    "edge_count": 143,
+    "edge_count": 146,
     "dxf_file": "profiles/Cabinet7RightSideInnerBody.dxf"
   },
   {
@@ -1887,12 +1887,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000013142,
-    "width_mm": 512.0,
-    "height_mm": 359.6,
-    "area_mm2": 172487.7918527873,
+    "thickness_mm": 5.7999999999999545,
+    "width_mm": 511.99999999999875,
+    "height_mm": 359.59999999999997,
+    "area_mm2": 172177.42229717932,
     "wire_count": 3,
-    "edge_count": 110,
+    "edge_count": 102,
     "dxf_file": "profiles/Cabinet7BackOuterBody.dxf"
   },
   {
@@ -1911,12 +1911,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000009277,
-    "width_mm": 512.0,
-    "height_mm": 359.5999999999998,
-    "area_mm2": 172487.79185275608,
+    "thickness_mm": 5.7999999999999545,
+    "width_mm": 511.9999999999976,
+    "height_mm": 359.59999999999985,
+    "area_mm2": 172177.4222971971,
     "wire_count": 3,
-    "edge_count": 110,
+    "edge_count": 102,
     "dxf_file": "profiles/Cabinet7BackInnerBody.dxf"
   },
   {
@@ -1936,9 +1936,9 @@
       0.0
     ],
     "thickness_mm": 5.800000000000017,
-    "width_mm": 511.9999999999986,
+    "width_mm": 511.9999999999976,
     "height_mm": 154.4000000000001,
-    "area_mm2": 73550.25274122837,
+    "area_mm2": 73550.25274122828,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet7FrontBottomStripOuterBody.dxf"
@@ -1959,10 +1959,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000000028,
-    "width_mm": 511.9999999999984,
+    "thickness_mm": 5.800000000000035,
+    "width_mm": 511.99999999999693,
     "height_mm": 154.4000000000001,
-    "area_mm2": 73550.25274122819,
+    "area_mm2": 73550.25274122796,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet7FrontBottomStripInnerBody.dxf"
@@ -1983,12 +1983,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 511.9999999999984,
-    "height_mm": 165.99999999999636,
-    "area_mm2": 79175.64955592054,
+    "thickness_mm": 5.8000000000000185,
+    "width_mm": 511.999999999997,
+    "height_mm": 154.4000000000001,
+    "area_mm2": 73550.25274122819,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet7BackBottomStripOuterBody.dxf"
   },
   {
@@ -2007,12 +2007,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 511.9999999999976,
-    "height_mm": 165.99999999999545,
-    "area_mm2": 79175.64955592013,
+    "thickness_mm": 5.80000000000003,
+    "width_mm": 511.99999999999665,
+    "height_mm": 154.4000000000001,
+    "area_mm2": 73550.25274122805,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet7BackBottomStripInnerBody.dxf"
   },
   {
@@ -2031,10 +2031,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8000000000014325,
+    "thickness_mm": 5.800000000001603,
     "width_mm": 512.0,
     "height_mm": 512.0,
-    "area_mm2": 248442.2350382364,
+    "area_mm2": 248442.23503822318,
     "wire_count": 3,
     "edge_count": 114,
     "dxf_file": "profiles/Cabinet8TopOuterBody.dxf"
@@ -2055,10 +2055,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000002115,
+    "thickness_mm": 5.800000000001376,
     "width_mm": 512.0,
     "height_mm": 512.0,
-    "area_mm2": 248442.23503834486,
+    "area_mm2": 248442.2350383612,
     "wire_count": 3,
     "edge_count": 114,
     "dxf_file": "profiles/Cabinet8TopInnerBody.dxf"
@@ -2079,12 +2079,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000038381,
-    "width_mm": 511.99999999999886,
-    "height_mm": 359.5999999999998,
-    "area_mm2": 173063.72129670045,
+    "thickness_mm": 5.800000000036562,
+    "width_mm": 512.0,
+    "height_mm": 359.59999999999945,
+    "area_mm2": 173196.56448202865,
     "wire_count": 11,
-    "edge_count": 143,
+    "edge_count": 146,
     "dxf_file": "profiles/Cabinet8LeftSideOuterBody.dxf"
   },
   {
@@ -2103,12 +2103,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000020191,
-    "width_mm": 511.99999999999477,
-    "height_mm": 359.59999999999945,
-    "area_mm2": 173063.72129714358,
+    "thickness_mm": 5.800000000023374,
+    "width_mm": 512.0,
+    "height_mm": 359.5999999999985,
+    "area_mm2": 173196.56448237784,
     "wire_count": 11,
-    "edge_count": 143,
+    "edge_count": 146,
     "dxf_file": "profiles/Cabinet8LeftSideInnerBody.dxf"
   },
   {
@@ -2127,12 +2127,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000019281,
-    "width_mm": 511.99999999999477,
-    "height_mm": 359.59999999999945,
-    "area_mm2": 173152.0785904191,
+    "thickness_mm": 5.800000000024738,
+    "width_mm": 512.0,
+    "height_mm": 359.5999999999985,
+    "area_mm2": 173284.92177579153,
     "wire_count": 9,
-    "edge_count": 141,
+    "edge_count": 144,
     "dxf_file": "profiles/Cabinet8RightSideOuterBody.dxf"
   },
   {
@@ -2151,12 +2151,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000002001,
-    "width_mm": 511.9999999999957,
-    "height_mm": 359.5999999999992,
-    "area_mm2": 173152.0785908871,
+    "thickness_mm": 5.80000000000382,
+    "width_mm": 512.0,
+    "height_mm": 359.59999999999854,
+    "area_mm2": 173284.92177604756,
     "wire_count": 9,
-    "edge_count": 141,
+    "edge_count": 144,
     "dxf_file": "profiles/Cabinet8RightSideInnerBody.dxf"
   },
   {
@@ -2175,12 +2175,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000007458,
-    "width_mm": 512.0,
-    "height_mm": 359.6,
-    "area_mm2": 172487.79185286496,
+    "thickness_mm": 5.7999999999999545,
+    "width_mm": 511.9999999999977,
+    "height_mm": 359.59999999999997,
+    "area_mm2": 172177.42229714987,
     "wire_count": 3,
-    "edge_count": 110,
+    "edge_count": 102,
     "dxf_file": "profiles/Cabinet8BackOuterBody.dxf"
   },
   {
@@ -2199,12 +2199,12 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000003138,
-    "width_mm": 512.0,
-    "height_mm": 359.5999999999998,
-    "area_mm2": 172487.7918529376,
+    "thickness_mm": 5.7999999999999545,
+    "width_mm": 511.99999999999636,
+    "height_mm": 359.59999999999945,
+    "area_mm2": 172177.42229716302,
     "wire_count": 3,
-    "edge_count": 110,
+    "edge_count": 102,
     "dxf_file": "profiles/Cabinet8BackInnerBody.dxf"
   },
   {
@@ -2223,10 +2223,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000000013,
-    "width_mm": 511.9999999999923,
+    "thickness_mm": 5.800000000000014,
+    "width_mm": 511.99999999999596,
     "height_mm": 154.4000000000001,
-    "area_mm2": 73550.25274122797,
+    "area_mm2": 73550.25274122824,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet8FrontBottomStripOuterBody.dxf"
@@ -2247,10 +2247,10 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.800000000000012,
-    "width_mm": 512.0000000000077,
+    "thickness_mm": 5.800000000000023,
+    "width_mm": 512.0000000000155,
     "height_mm": 154.4000000000001,
-    "area_mm2": 73550.25274122914,
+    "area_mm2": 73550.25274122956,
     "wire_count": 3,
     "edge_count": 80,
     "dxf_file": "profiles/Cabinet8FrontBottomStripInnerBody.dxf"
@@ -2271,12 +2271,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
-    "width_mm": 512.0000000000077,
-    "height_mm": 165.99999999999568,
-    "area_mm2": 79175.64955592112,
+    "thickness_mm": 5.800000000000013,
+    "width_mm": 512.0000000000155,
+    "height_mm": 154.4000000000001,
+    "area_mm2": 73550.25274122976,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet8BackBottomStripOuterBody.dxf"
   },
   {
@@ -2295,12 +2295,12 @@
       1.0,
       0.0
     ],
-    "thickness_mm": 5.8,
+    "thickness_mm": 5.800000000000032,
     "width_mm": 512.0000000000132,
-    "height_mm": 165.9999999999959,
-    "area_mm2": 79175.64955592148,
+    "height_mm": 154.4000000000001,
+    "area_mm2": 73550.2527412293,
     "wire_count": 3,
-    "edge_count": 78,
+    "edge_count": 80,
     "dxf_file": "profiles/Cabinet8BackBottomStripInnerBody.dxf"
   },
   {
@@ -2320,9 +2320,9 @@
       1.0
     ],
     "thickness_mm": 5.7999999999999545,
-    "width_mm": 969.1999999999954,
-    "height_mm": 113.59999999999906,
-    "area_mm2": 101944.99822366418,
+    "width_mm": 969.1999999999973,
+    "height_mm": 113.59999999999883,
+    "area_mm2": 101944.99822366016,
     "wire_count": 1,
     "edge_count": 76,
     "dxf_file": "profiles/Cabinet5FrontSupportOuterBody.dxf"
@@ -2344,9 +2344,9 @@
       1.0
     ],
     "thickness_mm": 5.7999999999999545,
-    "width_mm": 969.1999999999966,
-    "height_mm": 113.59999999999883,
-    "area_mm2": 101944.99822373073,
+    "width_mm": 969.1999999999975,
+    "height_mm": 113.59999999999849,
+    "area_mm2": 101944.99822372397,
     "wire_count": 1,
     "edge_count": 76,
     "dxf_file": "profiles/Cabinet5FrontSupportInnerBody.dxf"
@@ -2368,9 +2368,9 @@
       1.0
     ],
     "thickness_mm": 5.7999999999999545,
-    "width_mm": 969.1999999999944,
-    "height_mm": 113.59999999999889,
-    "area_mm2": 101944.99822364269,
+    "width_mm": 969.1999999999912,
+    "height_mm": 113.59999999999917,
+    "area_mm2": 101944.99822366137,
     "wire_count": 1,
     "edge_count": 76,
     "dxf_file": "profiles/Cabinet6FrontSupportOuterBody.dxf"
@@ -2392,9 +2392,9 @@
       1.0
     ],
     "thickness_mm": 5.7999999999999545,
-    "width_mm": 969.1999999999962,
-    "height_mm": 113.59999999999843,
-    "area_mm2": 101944.99822372253,
+    "width_mm": 969.1999999999887,
+    "height_mm": 113.59999999999877,
+    "area_mm2": 101944.99822366903,
     "wire_count": 1,
     "edge_count": 76,
     "dxf_file": "profiles/Cabinet6FrontSupportInnerBody.dxf"
@@ -2416,9 +2416,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000011,
-    "width_mm": 765.9999999999978,
-    "height_mm": 359.59999999999883,
-    "area_mm2": 44215.30364217048,
+    "width_mm": 766.0000000000003,
+    "height_mm": 359.6000000000001,
+    "area_mm2": 44215.303642173014,
     "wire_count": 2,
     "edge_count": 374,
     "dxf_file": "profiles/Cabinet1DrawerFaceFrameOuterBody.dxf"
@@ -2440,9 +2440,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000068,
-    "width_mm": 765.9999999999991,
-    "height_mm": 359.59999999999775,
-    "area_mm2": 44095.82364216083,
+    "width_mm": 765.9999999999997,
+    "height_mm": 359.5999999999993,
+    "area_mm2": 44095.82364216397,
     "wire_count": 4,
     "edge_count": 382,
     "dxf_file": "profiles/Cabinet1DrawerFaceFrameInnerBody.dxf"
@@ -2464,9 +2464,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000011,
-    "width_mm": 961.3999999999992,
-    "height_mm": 34.19999999999783,
-    "area_mm2": 25996.88548245548,
+    "width_mm": 961.3999999999974,
+    "height_mm": 34.19999999999936,
+    "area_mm2": 25996.885482456102,
     "wire_count": 1,
     "edge_count": 52,
     "dxf_file": "profiles/Cabinet1CenterSupportOuterBody.dxf"
@@ -2488,9 +2488,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000011,
-    "width_mm": 961.3999999999992,
-    "height_mm": 34.19999999999783,
-    "area_mm2": 25996.885482456753,
+    "width_mm": 961.3999999999974,
+    "height_mm": 34.19999999999936,
+    "area_mm2": 25996.88548245601,
     "wire_count": 1,
     "edge_count": 52,
     "dxf_file": "profiles/Cabinet1CenterSupportInnerBody.dxf"
@@ -3112,9 +3112,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000182,
-    "width_mm": 766.0000000000015,
-    "height_mm": 359.59999999999917,
-    "area_mm2": 44215.30364214216,
+    "width_mm": 765.9999999999966,
+    "height_mm": 359.59999999999894,
+    "area_mm2": 44215.30364213193,
     "wire_count": 2,
     "edge_count": 374,
     "dxf_file": "profiles/Cabinet2DrawerFaceFrameOuterBody.dxf"
@@ -3135,10 +3135,10 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000010641,
-    "width_mm": 765.9999999999997,
-    "height_mm": 359.5999999999977,
-    "area_mm2": 44095.82364211606,
+    "thickness_mm": 5.800000000008367,
+    "width_mm": 765.9999999999984,
+    "height_mm": 359.5999999999975,
+    "area_mm2": 44095.82364214006,
     "wire_count": 4,
     "edge_count": 382,
     "dxf_file": "profiles/Cabinet2DrawerFaceFrameInnerBody.dxf"
@@ -3160,9 +3160,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000011,
-    "width_mm": 961.4000000000103,
-    "height_mm": 34.19999999999777,
-    "area_mm2": 25996.88548245659,
+    "width_mm": 961.4000000000133,
+    "height_mm": 34.1999999999976,
+    "area_mm2": 25996.88548245527,
     "wire_count": 1,
     "edge_count": 52,
     "dxf_file": "profiles/Cabinet2CenterSupportOuterBody.dxf"
@@ -3184,9 +3184,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000011,
-    "width_mm": 961.4000000000103,
-    "height_mm": 34.19999999999777,
-    "area_mm2": 25996.885482458365,
+    "width_mm": 961.4000000000133,
+    "height_mm": 34.1999999999976,
+    "area_mm2": 25996.885482457477,
     "wire_count": 1,
     "edge_count": 52,
     "dxf_file": "profiles/Cabinet2CenterSupportInnerBody.dxf"
@@ -3808,9 +3808,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000011,
-    "width_mm": 765.9999999999955,
-    "height_mm": 359.5999999999994,
-    "area_mm2": 44215.303642168044,
+    "width_mm": 766.0000000000025,
+    "height_mm": 359.60000000000014,
+    "area_mm2": 44215.30364217174,
     "wire_count": 2,
     "edge_count": 374,
     "dxf_file": "profiles/Cabinet3DrawerFaceFrameOuterBody.dxf"
@@ -3831,10 +3831,10 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000000864,
-    "width_mm": 765.9999999999945,
-    "height_mm": 359.5999999999984,
-    "area_mm2": 44095.82364215617,
+    "thickness_mm": 5.800000000000978,
+    "width_mm": 765.9999999999985,
+    "height_mm": 359.5999999999992,
+    "area_mm2": 44095.82364215849,
     "wire_count": 4,
     "edge_count": 382,
     "dxf_file": "profiles/Cabinet3DrawerFaceFrameInnerBody.dxf"
@@ -3856,9 +3856,9 @@
       1.0
     ],
     "thickness_mm": 5.7999999999999545,
-    "width_mm": 961.3999999999976,
-    "height_mm": 34.1999999999984,
-    "area_mm2": 25996.88548245734,
+    "width_mm": 961.3999999999997,
+    "height_mm": 34.19999999999925,
+    "area_mm2": 25996.885482460144,
     "wire_count": 1,
     "edge_count": 52,
     "dxf_file": "profiles/Cabinet3CenterSupportOuterBody.dxf"
@@ -3880,9 +3880,9 @@
       1.0
     ],
     "thickness_mm": 5.7999999999999545,
-    "width_mm": 961.3999999999976,
-    "height_mm": 34.1999999999984,
-    "area_mm2": 25996.885482453952,
+    "width_mm": 961.3999999999997,
+    "height_mm": 34.19999999999925,
+    "area_mm2": 25996.885482451307,
     "wire_count": 1,
     "edge_count": 52,
     "dxf_file": "profiles/Cabinet3CenterSupportInnerBody.dxf"
@@ -4504,9 +4504,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000182,
-    "width_mm": 766.0000000000033,
-    "height_mm": 359.59999999999917,
-    "area_mm2": 44215.303642150386,
+    "width_mm": 765.9999999999955,
+    "height_mm": 359.5999999999992,
+    "area_mm2": 44215.30364214563,
     "wire_count": 2,
     "edge_count": 374,
     "dxf_file": "profiles/Cabinet4DrawerFaceFrameOuterBody.dxf"
@@ -4527,10 +4527,10 @@
       0.0,
       1.0
     ],
-    "thickness_mm": 5.800000000006094,
-    "width_mm": 766.0000000000002,
-    "height_mm": 359.5999999999975,
-    "area_mm2": 44095.8236421541,
+    "thickness_mm": 5.800000000008822,
+    "width_mm": 766.0000000000006,
+    "height_mm": 359.5999999999978,
+    "area_mm2": 44095.82364213115,
     "wire_count": 4,
     "edge_count": 382,
     "dxf_file": "profiles/Cabinet4DrawerFaceFrameInnerBody.dxf"
@@ -4552,9 +4552,9 @@
       1.0
     ],
     "thickness_mm": 5.7999999999999545,
-    "width_mm": 961.4000000000069,
-    "height_mm": 34.199999999997544,
-    "area_mm2": 25996.88548245908,
+    "width_mm": 961.4000000000135,
+    "height_mm": 34.19999999999783,
+    "area_mm2": 25996.885482456226,
     "wire_count": 1,
     "edge_count": 52,
     "dxf_file": "profiles/Cabinet4CenterSupportOuterBody.dxf"
@@ -4576,9 +4576,9 @@
       1.0
     ],
     "thickness_mm": 5.7999999999999545,
-    "width_mm": 961.4000000000069,
-    "height_mm": 34.199999999997544,
-    "area_mm2": 25996.885482460788,
+    "width_mm": 961.4000000000135,
+    "height_mm": 34.19999999999783,
+    "area_mm2": 25996.88548245589,
     "wire_count": 1,
     "edge_count": 52,
     "dxf_file": "profiles/Cabinet4CenterSupportInnerBody.dxf"
@@ -5200,9 +5200,9 @@
       1.0
     ],
     "thickness_mm": 5.7999999999999545,
-    "width_mm": 511.9999999999977,
-    "height_mm": 359.5999999999992,
-    "area_mm2": 46091.86345229521,
+    "width_mm": 511.99999999999653,
+    "height_mm": 359.59999999999843,
+    "area_mm2": 46091.86345229918,
     "wire_count": 3,
     "edge_count": 600,
     "dxf_file": "profiles/Cabinet7LowerDrawerCombinedFaceFrameOuterBody.dxf"
@@ -5224,9 +5224,9 @@
       1.0
     ],
     "thickness_mm": 5.7999999999999545,
-    "width_mm": 511.99999999999716,
-    "height_mm": 359.59999999999883,
-    "area_mm2": 46091.863452292615,
+    "width_mm": 511.99999999999613,
+    "height_mm": 359.59999999999786,
+    "area_mm2": 46091.86345229894,
     "wire_count": 3,
     "edge_count": 600,
     "dxf_file": "profiles/Cabinet7LowerDrawerCombinedFaceFrameInnerBody.dxf"
@@ -5849,8 +5849,8 @@
     ],
     "thickness_mm": 5.7999999999999545,
     "width_mm": 512.0000000000136,
-    "height_mm": 359.5999999999991,
-    "area_mm2": 46091.86345230375,
+    "height_mm": 359.59999999999854,
+    "area_mm2": 46091.86345230365,
     "wire_count": 3,
     "edge_count": 600,
     "dxf_file": "profiles/Cabinet8LowerDrawerCombinedFaceFrameOuterBody.dxf"
@@ -5872,9 +5872,9 @@
       1.0
     ],
     "thickness_mm": 5.7999999999999545,
-    "width_mm": 512.0000000000132,
-    "height_mm": 359.5999999999987,
-    "area_mm2": 46091.86345230489,
+    "width_mm": 512.0000000000205,
+    "height_mm": 359.5999999999982,
+    "area_mm2": 46091.86345230473,
     "wire_count": 3,
     "edge_count": 600,
     "dxf_file": "profiles/Cabinet8LowerDrawerCombinedFaceFrameInnerBody.dxf"
@@ -5898,7 +5898,7 @@
     "thickness_mm": 5.7999999999999545,
     "width_mm": 461.6000000000009,
     "height_mm": 143.00000000000014,
-    "area_mm2": 57223.62544702419,
+    "area_mm2": 57223.6254470242,
     "wire_count": 3,
     "edge_count": 324,
     "dxf_file": "profiles/Cabinet8LowerDrawerFaceOuterBody.dxf"
@@ -6522,7 +6522,7 @@
     "thickness_mm": 5.7999999999999545,
     "width_mm": 461.60000000000014,
     "height_mm": 143.00000000000003,
-    "area_mm2": 54868.24544702408,
+    "area_mm2": 54868.245447023844,
     "wire_count": 13,
     "edge_count": 348,
     "dxf_file": "profiles/Cabinet7UpperDrawerFaceInnerBody.dxf"
@@ -6568,9 +6568,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000004,
-    "width_mm": 490.5999999999997,
+    "width_mm": 490.59999999999945,
     "height_mm": 100.0,
-    "area_mm2": 46653.23681469251,
+    "area_mm2": 46653.23681469259,
     "wire_count": 7,
     "edge_count": 70,
     "dxf_file": "profiles/Cabinet7UpperDrawerSideLowInnerBody.dxf"
@@ -6592,9 +6592,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000011,
-    "width_mm": 490.60000000000014,
+    "width_mm": 490.5999999999999,
     "height_mm": 100.0,
-    "area_mm2": 46653.236814689124,
+    "area_mm2": 46653.23681469227,
     "wire_count": 7,
     "edge_count": 70,
     "dxf_file": "profiles/Cabinet7UpperDrawerSideHighInnerBody.dxf"
@@ -7098,7 +7098,7 @@
     "thickness_mm": 5.7999999999999545,
     "width_mm": 461.60000000000093,
     "height_mm": 143.00000000000003,
-    "area_mm2": 57223.62544702423,
+    "area_mm2": 57223.62544702422,
     "wire_count": 3,
     "edge_count": 324,
     "dxf_file": "profiles/Cabinet8UpperDrawerFaceOuterBody.dxf"
@@ -7122,7 +7122,7 @@
     "thickness_mm": 5.7999999999999545,
     "width_mm": 461.600000000002,
     "height_mm": 143.00000000000003,
-    "area_mm2": 54868.245447024245,
+    "area_mm2": 54868.24544702398,
     "wire_count": 13,
     "edge_count": 348,
     "dxf_file": "profiles/Cabinet8UpperDrawerFaceInnerBody.dxf"
@@ -7168,9 +7168,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000001091,
-    "width_mm": 490.6000000000008,
+    "width_mm": 490.6000000000006,
     "height_mm": 100.0,
-    "area_mm2": 46653.23681466474,
+    "area_mm2": 46653.2368146818,
     "wire_count": 7,
     "edge_count": 70,
     "dxf_file": "profiles/Cabinet8UpperDrawerSideLowInnerBody.dxf"
@@ -7192,9 +7192,9 @@
       1.0
     ],
     "thickness_mm": 5.800000000000637,
-    "width_mm": 490.6000000000008,
+    "width_mm": 490.6000000000006,
     "height_mm": 100.0,
-    "area_mm2": 46653.236814663665,
+    "area_mm2": 46653.236814669326,
     "wire_count": 7,
     "edge_count": 70,
     "dxf_file": "profiles/Cabinet8UpperDrawerSideHighInnerBody.dxf"

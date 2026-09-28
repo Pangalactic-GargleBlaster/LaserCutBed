@@ -6,8 +6,9 @@ assembly groups used for laser sheet layout.
 
 The reusable FreeCAD workbench and manufacturing tools are in the
 [Design System](https://github.com/Pangalactic-GargleBlaster/FreeCAD-Laser-Cutting-Design-System)
-repository. Initialize the `design-system` submodule after cloning, or set
-`DESIGN_SYSTEM_ROOT` to a separate checkout of that repository.
+repository. After cloning, run `git submodule update --init` to fetch the
+version pinned by this project. Alternatively, set `DESIGN_SYSTEM_ROOT` to a
+separate checkout of that repository.
 
 From this repository's root:
 
