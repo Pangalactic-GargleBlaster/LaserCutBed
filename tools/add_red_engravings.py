@@ -94,6 +94,10 @@ def main(profiles_dir,sheets_dir,layout_path,metadata_path,links_path):
     for body,polys in paths.items():
         add_to_dxf(os.path.join(dxf_dir,body+'.dxf'),polys)
     layout=json.load(open(layout_path))
+    combined_map=os.path.join(sheets_dir,'map.svg')
+    combined=ET.parse(combined_map) if os.path.isfile(combined_map) else None
+    ns={'svg':'http://www.w3.org/2000/svg'}
+    ET.register_namespace('',ns['svg'])
     for sheet in layout['sheets']:
         number=sheet['number'];all_polys=[]
         svg=[]
@@ -104,6 +108,19 @@ def main(profiles_dir,sheets_dir,layout_path,metadata_path,links_path):
                 svg.append('M '+' L '.join(f'{x:.3f} {y:.3f}' for x,y in poly)+' Z')
         if not all_polys:continue
         add_to_dxf(os.path.join(sheets_dir,f'sheet-{number:02d}-cut.dxf'),all_polys)
+        if combined is not None:
+            sheet_group=combined.getroot().find(f"svg:g[@id='sheet-{number:02d}']",ns)
+            if sheet_group is None:
+                raise ValueError(('Sheet missing from combined map',number))
+            geometry=sheet_group.find('svg:g/svg:g',ns)
+            if geometry is None:
+                raise ValueError(('Cut geometry group missing',number))
+            for previous in list(geometry):
+                if previous.get('id')=='engraving':geometry.remove(previous)
+            ET.SubElement(geometry,'{'+ns['svg']+'}path',
+                          {'id':'engraving','d':' '.join(svg),'fill':'none',
+                           'stroke':'red','stroke-width':'0.3'})
+            continue
         map_path=os.path.join(sheets_dir,f'sheet-{number:02d}-map.svg')
         with open(map_path) as stream:content=stream.read()
         previous=content.rfind('<path d="M ')
@@ -113,6 +130,8 @@ def main(profiles_dir,sheets_dir,layout_path,metadata_path,links_path):
             content=content[:previous]+content[end:]
         content=content.replace('</g>',f'<path d="{" ".join(svg)}" fill="none" stroke="red" stroke-width="0.3"/></g>',1)
         with open(map_path,'w') as stream:stream.write(content)
+    if combined is not None:
+        combined.write(combined_map,encoding='unicode')
     print('ENGRAVED',len(links),'MOTIFS',len(paths),'FACE_DXFS',flush=True)
 
 if __name__=='__main__':main(*sys.argv[1:6])

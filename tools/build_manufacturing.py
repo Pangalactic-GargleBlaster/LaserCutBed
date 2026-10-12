@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 import zipfile
+import xml.etree.ElementTree as ET
 
 from shared_paths import design_system_root
 
@@ -87,13 +88,14 @@ profiles/*.dxf             One face-up cut profile per body; affected outer
                            drawer faces also include red engraving paths.
 profiles/manifest.csv      Body names, selected faces, and dimensions.
 sheets/sheet-XX-cut.dxf    Combined cut and engraving paths for each panel.
-sheets/sheet-XX-map.svg    Visual placement map with part IDs; do not cut it.
+sheets/map.svg             All panels stacked vertically, labeled by index,
+                           with part IDs and engraving previews; do not cut it.
 sheets/sheet-index.csv     Part ID, body name, sheet, position, rotation.
 layout.json                Machine-readable placements and assumptions.
 
 REBUILD
-From the Design System folder, run:
-python3 Bed/tools/build_manufacturing.py
+From the Bed project folder, run:
+python3 tools/build_manufacturing.py
 This reads the current saved Bed.FCStd and rebuilds manufacturing/ only.
 """
 
@@ -127,9 +129,25 @@ def validate(publication, model, parameters):
         raise ValueError("Group proximity metrics do not match placements")
     profiles = list((publication / "profiles").glob("*.dxf"))
     sheets = list((publication / "sheets").glob("sheet-*-cut.dxf"))
-    maps = list((publication / "sheets").glob("sheet-*-map.svg"))
-    if len(profiles) != 320 or len(sheets) != len(layout["sheets"]) or len(maps) != len(sheets):
+    map_path = publication / "sheets/map.svg"
+    if len(profiles) != 320 or len(sheets) != len(layout["sheets"]) or not map_path.is_file():
         raise ValueError("Missing profile or sheet export")
+    ns = {"svg": "http://www.w3.org/2000/svg"}
+    map_root = ET.parse(map_path).getroot()
+    map_sheets = map_root.findall("svg:g", ns)
+    if [group.get("id") for group in map_sheets] != [
+        f"sheet-{sheet['number']:02d}" for sheet in layout["sheets"]
+    ]:
+        raise ValueError("Combined map sheet indices do not match the layout")
+    for group, sheet in zip(map_sheets, layout["sheets"]):
+        label = group.find("svg:text", ns)
+        if label is None or label.text != f"Sheet {sheet['number']}":
+            raise ValueError("Combined map sheet label is missing")
+        labels = group.findall("svg:g/svg:text", ns)
+        if len(labels) != len(sheet["parts"]):
+            raise ValueError("Combined map part labels are incomplete")
+    if list((publication / "sheets").glob("sheet-*-map.svg")):
+        raise ValueError("Obsolete per-sheet maps remain")
     if sum("ENGRAVE_RED" in p.read_text(errors="replace") for p in profiles) != 8:
         raise ValueError("Expected red engraving on eight face profiles")
     for path in profiles + sheets:
