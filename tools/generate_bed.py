@@ -22,7 +22,7 @@ if MODULE_DIR not in sys.path:
 
 import panel as panel_tools
 import drawer_components
-from finger_joint import create_joint
+from joint_group import create_joint_group
 
 SHARED_TOOLS_DIR = os.path.join(PROJECT_ROOT, "tools")
 if SHARED_TOOLS_DIR not in sys.path:
@@ -35,7 +35,8 @@ DEPTH = 38 * INCH
 WIDTH = 30 * INCH
 WALL_DEPTH = 20 * INCH
 BEDSIDE_SIZE = 20 * INCH
-HEIGHT = 14 * INCH
+DEFAULT_BED_HEIGHT = 15 * INCH
+HEIGHT = DEFAULT_BED_HEIGHT
 STRIP = 6 * INCH
 FILIGREE_SVG = os.path.join(ROOT, "assets", "filigree.svg")
 FILIGREE_IMAGE = os.path.join(ROOT, "assets", "filigree_drawer.png")
@@ -191,56 +192,43 @@ def configured_ply():
 
 
 def add_parameters(doc):
-    params = doc.addObject("App::VarSet", "BedParameters")
-    params.Label = "Bed Parameters"
-    params.addProperty("App::PropertyInteger", "NumberOfFingers", "Finger joints")
-    params.addProperty("App::PropertyInteger", "ShortJointFingers", "Finger joints")
-    params.addProperty("App::PropertyLength", "FingerOvershoot", "Finger joints")
-    params.addProperty("App::PropertyLength", "FingerFilletRadius", "Finger joints")
-    params.addProperty("App::PropertyLength", "WallFrontSupportHeight", "Cabinet supports")
-    params.addProperty("App::PropertyLength", "ply", "Material")
-    params.addProperty("App::PropertyLength", "BoltHoleDiameter", "Cabinet connectors")
-    params.addProperty("App::PropertyLength", "DowelDiameter", "Panel alignment")
-    params.addProperty("App::PropertyLength", "DrawerClearance", "Drawers")
-    params.addProperty("App::PropertyLength", "DrawerBottomOffset", "Drawers")
-    params.addProperty("App::PropertyLength", "DrawerSlideWidth", "Drawers")
-    params.addProperty("App::PropertyLength", "DrawerHandleWidth", "Drawers")
-    params.addProperty("App::PropertyLength", "DrawerHandleHeight", "Drawers")
-    params.addProperty("App::PropertyLength", "DrawerWaveAmplitude", "Drawers")
-    params.addProperty("App::PropertyLength", "LargeDrawerBoxHeight", "Drawers")
-    params.addProperty("App::PropertyLength", "BedsideDrawerBoxHeight", "Drawers")
-    params.addProperty("App::PropertyLength", "LargeDrawerBoxWidth", "Drawers")
-    params.addProperty("App::PropertyLength", "BedsideDrawerBoxWidth", "Drawers")
-    params.addProperty("App::PropertyLength", "LargeDrawerSideLength", "Drawers")
-    params.addProperty("App::PropertyLength", "BedsideDrawerSideLength", "Drawers")
-    params.NumberOfFingers = 4
-    params.ShortJointFingers = 2
-    params.FingerOvershoot = 2
-    params.FingerFilletRadius = 2
-    params.WallFrontSupportHeight = 100
-    params.ply = configured_ply()
-    params.BoltHoleDiameter = 7.5
-    params.DowelDiameter = 6.0
-    params.DrawerClearance = 3
-    params.DrawerBottomOffset = 0.5 * INCH
-    params.DrawerSlideWidth = 1 * INCH
-    params.DrawerHandleWidth = 6 * INCH
-    params.DrawerHandleHeight = 2 * INCH
-    params.DrawerWaveAmplitude = 12
-    params.LargeDrawerBoxHeight = 7 * INCH
-    params.BedsideDrawerBoxHeight = 100
-    params.setExpression(
-        "LargeDrawerBoxWidth", "30 in - 12 * ply - DrawerClearance"
-    )
-    params.setExpression(
-        "BedsideDrawerBoxWidth", "20 in - 12 * ply - DrawerClearance"
-    )
-    params.setExpression(
-        "LargeDrawerSideLength", "38 in - 6 * ply - FingerOvershoot"
-    )
-    params.setExpression(
-        "BedsideDrawerSideLength", "20 in - 6 * ply - FingerOvershoot"
-    )
+    """Initialize only missing parameters; keep saved values and expressions."""
+    params = doc.getObject("BedParameters")
+    if params is None:
+        params = doc.addObject("App::VarSet", "BedParameters")
+        params.Label = "Bed Parameters"
+    definitions = [
+        ('App::PropertyLength', 'BedHeight', 'Bed dimensions', DEFAULT_BED_HEIGHT, None),
+        ('App::PropertyInteger', 'NumberOfFingers', 'Finger joints', 4, None),
+        ('App::PropertyInteger', 'ShortJointFingers', 'Finger joints', 2, None),
+        ('App::PropertyLength', 'FingerOvershoot', 'Finger joints', 2, None),
+        ('App::PropertyLength', 'FingerFilletRadius', 'Finger joints', 2, None),
+        ('App::PropertyLength', 'WallFrontSupportHeight', 'Cabinet supports', 100, None),
+        ('App::PropertyLength', 'ply', 'Material', configured_ply, None),
+        ('App::PropertyLength', 'BoltHoleDiameter', 'Cabinet connectors', 7.5, None),
+        ('App::PropertyLength', 'DowelDiameter', 'Panel alignment', 6.0, None),
+        ('App::PropertyLength', 'DrawerClearance', 'Drawers', 3, None),
+        ('App::PropertyLength', 'DrawerBottomOffset', 'Drawers', 0.5 * INCH, None),
+        ('App::PropertyLength', 'DrawerSlideWidth', 'Drawers', 1 * INCH, None),
+        ('App::PropertyLength', 'DrawerHandleWidth', 'Drawers', 6 * INCH, None),
+        ('App::PropertyLength', 'DrawerHandleHeight', 'Drawers', 2 * INCH, None),
+        ('App::PropertyLength', 'DrawerWaveAmplitude', 'Drawers', 12, None),
+        ('App::PropertyLength', 'LargeDrawerBoxHeight', 'Drawers', 7 * INCH, None),
+        ('App::PropertyLength', 'BedsideDrawerBoxHeight', 'Drawers', 100, None),
+        ('App::PropertyLength', 'LargeDrawerBoxWidth', 'Drawers', None, '30 in - 12 * ply - DrawerClearance'),
+        ('App::PropertyLength', 'BedsideDrawerBoxWidth', 'Drawers', None, '20 in - 12 * ply - DrawerClearance'),
+        ('App::PropertyLength', 'LargeDrawerSideLength', 'Drawers', None, '38 in - 6 * ply - FingerOvershoot'),
+        ('App::PropertyLength', 'BedsideDrawerSideLength', 'Drawers', None, '20 in - 6 * ply - FingerOvershoot'),
+    ]
+    for property_type, name, group, default, expression in definitions:
+        if name in params.PropertiesList:
+            continue
+        params.addProperty(property_type, name, group)
+        if expression is None:
+            setattr(params, name, default() if callable(default) else default)
+        else:
+            params.setExpression(name, expression)
+    doc.recompute()
     return params
 
 
@@ -294,9 +282,10 @@ def _apply_drawer_joint(
     finger_count=None,
     zero_receiver_overshoot=False,
 ):
-    source = source_body.Tip
-    face_name = _find_joint_face(source, axis, coordinate)
-    params = source_body.Document.BedParameters
+    source_bodies = list(source_body) if isinstance(source_body, (list, tuple)) else [source_body]
+    source_faces = [(body.Tip, _find_joint_face(body.Tip, axis, coordinate))
+                    for body in source_bodies]
+    params = source_bodies[0].Document.BedParameters
     kwargs = {
         "finger_count_expression": (
             "BedParameters.NumberOfFingers" if finger_count is None
@@ -317,32 +306,30 @@ def _apply_drawer_joint(
     if zero_receiver_overshoot:
         kwargs["receiver_overshoot"] = 0
         kwargs.pop("receiver_overshoot_expression")
-    joint = create_joint(
-        source,
-        face_name,
+    joint, results = create_joint_group(
+        source_faces,
         receivers,
         params.NumberOfFingers if finger_count is None else finger_count,
         **kwargs,
     )
     joint.Label = label
-    joint.ShapeMaterial = WOOD_MATERIAL
-    source_body.ShapeMaterial = WOOD_MATERIAL
+    for result in results:
+        result.ShapeMaterial = WOOD_MATERIAL
+    for body in source_bodies:
+        body.ShapeMaterial = WOOD_MATERIAL
     for receiver in receivers:
         receiver.ShapeMaterial = WOOD_MATERIAL
         receiver.Tip.ShapeMaterial = WOOD_MATERIAL
     return joint
 
 
-def _apply_cabinet_joint(layers, source_key, axis, coordinate, receiver_keys, label):
-    """Join one cabinet ply through every ply of the receiving panel stack."""
-    source_body = _feature_body(layers[source_key])
-    receiver_bodies = [_feature_body(layers[key]) for key in receiver_keys]
+def _apply_cabinet_joint(layers, source_name, axis, coordinate, receiver_keys, label):
+    """Join all source plies in one native laminated-panel joint."""
+    source_bodies = [_feature_body(layers[(source_name, layer)])
+                     for layer in ("Outer", "Inner")]
     return _apply_drawer_joint(
-        source_body,
-        axis,
-        coordinate,
-        receiver_bodies,
-        label,
+        source_bodies, axis, coordinate,
+        [_feature_body(layers[key]) for key in receiver_keys], label,
     )
 
 
@@ -350,13 +337,8 @@ def add_cabinet_joints(layers, key, x0, y0, kind):
     """Finger-joint every laminated structural panel in one cabinet."""
     ply = next(iter(layers.values())).Document.BedParameters.ply.Value
     top_receivers = (("Top", "Inner"), ("Top", "Outer"))
-
     if kind == "main":
         side_names = ("LowerSide", "UpperSide")
-        side_receivers = {
-            "LowerSide": (("LowerSide", "Inner"), ("LowerSide", "Outer")),
-            "UpperSide": (("UpperSide", "Inner"), ("UpperSide", "Outer")),
-        }
         side_axis = App.Vector(0, 1, 0)
         side_coordinates = {
             "LowerSide": y0 + 2 * ply,
@@ -364,80 +346,35 @@ def add_cabinet_joints(layers, key, x0, y0, kind):
         }
     else:
         side_names = ("LeftSide", "RightSide")
-        side_receivers = {
-            "LeftSide": (("LeftSide", "Inner"), ("LeftSide", "Outer")),
-            "RightSide": (("RightSide", "Inner"), ("RightSide", "Outer")),
-        }
         side_axis = App.Vector(1, 0, 0)
         side_coordinates = {
             "LeftSide": x0 + 2 * ply,
-            "RightSide": x0 + DEPTH - 2 * ply
-            if kind == "wall"
-            else x0 + BEDSIDE_SIZE - 2 * ply,
+            "RightSide": x0 + (DEPTH if kind == "wall" else BEDSIDE_SIZE) - 2 * ply,
         }
-
-    # The back must use its untouched top face before side and strip cuts reach it.
-    for layer_name in ("Outer", "Inner"):
+    side_receivers = {name: ((name, "Inner"), (name, "Outer"))
+                      for name in side_names}
+    # Select the untouched top faces before other joints cut their edges.
+    for name in ("Back", *side_names):
         _apply_cabinet_joint(
-            layers,
-            ("Back", layer_name),
-            App.Vector(0, 0, 1),
-            HEIGHT - 2 * ply,
-            top_receivers,
-            f"{key} back {layer_name.lower()}-to-top joint",
+            layers, name, App.Vector(0, 0, 1), HEIGHT - 2 * ply,
+            top_receivers, f"{key} {name}-to-top joint",
         )
-
-    # Side plies join the top before the back and bottom strips cut their edges.
-    for side_name in side_names:
-        for layer_name in ("Outer", "Inner"):
-            source_key = (side_name, layer_name)
-            _apply_cabinet_joint(
-                layers,
-                source_key,
-                App.Vector(0, 0, 1),
-                HEIGHT - 2 * ply,
-                top_receivers,
-                f"{key} {side_name} {layer_name.lower()}-to-top joint",
-            )
-
-    # The back fits between the sides, just as the face frame does. Its plies
-    # supply the fingers and the side plies receive them.
-    for side_name in side_names:
-        for layer_name in ("Outer", "Inner"):
-            _apply_cabinet_joint(
-                layers,
-                ("Back", layer_name),
-                side_axis,
-                side_coordinates[side_name],
-                side_receivers[side_name],
-                f"{key} back {layer_name.lower()}-to-{side_name} joint",
-            )
-
-    # Both bottom strips join both side stacks.
-    for strip_name in ("FrontBottomStrip", "BackBottomStrip"):
-        for layer_name in ("Outer", "Inner"):
-            source_key = (strip_name, layer_name)
-            for side_name in side_names:
-                _apply_cabinet_joint(
-                    layers,
-                    source_key,
-                    side_axis,
-                    side_coordinates[side_name],
-                    side_receivers[side_name],
-                    f"{key} {strip_name} {layer_name.lower()}-to-{side_name} joint",
-                )
-
-    # The back now sits above the rear strip, like the face frame above the
-    # front strip. Join its bottom fingers into both rear-strip plies.
-    for layer_name in ("Outer", "Inner"):
+    for side in side_names:
         _apply_cabinet_joint(
-            layers,
-            ("Back", layer_name),
-            App.Vector(0, 0, 1),
-            2 * ply,
-            (("BackBottomStrip", "Inner"), ("BackBottomStrip", "Outer")),
-            f"{key} back {layer_name.lower()}-to-rear-sill joint",
+            layers, "Back", side_axis, side_coordinates[side],
+            side_receivers[side], f"{key} back-to-{side} joint",
         )
+    for strip in ("FrontBottomStrip", "BackBottomStrip"):
+        for side in side_names:
+            _apply_cabinet_joint(
+                layers, strip, side_axis, side_coordinates[side],
+                side_receivers[side], f"{key} {strip}-to-{side} joint",
+            )
+    _apply_cabinet_joint(
+        layers, "Back", App.Vector(0, 0, 1), 2 * ply,
+        (("BackBottomStrip", "Inner"), ("BackBottomStrip", "Outer")),
+        f"{key} back-to-rear-sill joint",
+    )
 
 
 def add_face_frame_joints(layers, frames, key, x0, y0, kind):
@@ -453,24 +390,24 @@ def add_face_frame_joints(layers, frames, key, x0, y0, kind):
             (App.Vector(1, 0, 0), x0 + 2 * ply, "LeftSide"),
             (App.Vector(1, 0, 0), x0 + BEDSIDE_SIZE - 2 * ply, "RightSide"),
         )
-    for layer_name, frame in frames.items():
+    frame = list(frames.values())
+    _apply_drawer_joint(
+        frame, App.Vector(0, 0, 1), HEIGHT - 2 * ply,
+        [_feature_body(layers[("Top", name)]) for name in ("Inner", "Outer")],
+        f"{key} frame-to-top joint",
+    )
+    for axis, coordinate, side in sides:
         _apply_drawer_joint(
-            frame, App.Vector(0, 0, 1), HEIGHT - 2 * ply,
-            [_feature_body(layers[("Top", name)]) for name in ("Inner", "Outer")],
-            f"{key} frame {layer_name.lower()}-to-top joint",
+            frame, axis, coordinate,
+            [_feature_body(layers[(side, name)]) for name in ("Inner", "Outer")],
+            f"{key} frame-to-{side} joint",
         )
-        for axis, coordinate, side in sides:
-            _apply_drawer_joint(
-                frame, axis, coordinate,
-                [_feature_body(layers[(side, name)]) for name in ("Inner", "Outer")],
-                f"{key} frame {layer_name.lower()}-to-{side} joint",
-            )
-        _apply_drawer_joint(
-            frame, App.Vector(0, 0, 1), 2 * ply,
-            [_feature_body(layers[("FrontBottomStrip", name)])
-             for name in ("Inner", "Outer")],
-            f"{key} frame {layer_name.lower()}-to-front-sill joint",
-        )
+    _apply_drawer_joint(
+        frame, App.Vector(0, 0, 1), 2 * ply,
+        [_feature_body(layers[("FrontBottomStrip", name)])
+         for name in ("Inner", "Outer")],
+        f"{key} frame-to-front-sill joint",
+    )
 
 
 def add_main_center_support(part, layers, frame_inner, key, x0, y0, direction, color):
@@ -488,6 +425,7 @@ def add_main_center_support(part, layers, frame_inner, key, x0, y0, direction, c
     z = HEIGHT - 2 * ply - height
     front_x = x if direction == "-X" else x0 + DEPTH - 2 * ply
     back_x = x0 + DEPTH - 2 * ply if direction == "-X" else x
+    source_bodies = []
     for layer_name, y, y_expr in (
         ("Outer", y0 + WIDTH / 2 - ply,
          f"{y0 + WIDTH / 2} mm - BedParameters.ply"),
@@ -500,32 +438,32 @@ def add_main_center_support(part, layers, frame_inner, key, x0, y0, direction, c
             {
                 "X": f"{x0} mm + 2 * BedParameters.ply",
                 "Y": y_expr,
-                "Z": f"{HEIGHT} mm - 2 * BedParameters.ply - ({height_expr})",
+                "Z": f"BedParameters.BedHeight - 2 * BedParameters.ply - ({height_expr})",
                 "Length": "38 in - 4 * BedParameters.ply",
                 "Width": "BedParameters.ply",
                 "Height": height_expr,
             },
             color,
         )
-        part.Document.recompute()
-        body = _feature_body(feature)
-        _apply_drawer_joint(
-            body, App.Vector(0, 0, 1), HEIGHT - 2 * ply,
-            [_feature_body(layers[("Top", name)]) for name in ("Inner", "Outer")],
-            f"{key} center support {layer_name.lower()}-to-top joint",
-        )
-        _apply_drawer_joint(
-            body, App.Vector(1, 0, 0), back_x,
-            [_feature_body(layers[("Back", name)]) for name in ("Inner", "Outer")],
-            f"{key} center support {layer_name.lower()}-to-back joint",
-            finger_count=params.ShortJointFingers,
-        )
-        _apply_drawer_joint(
-            body, App.Vector(1, 0, 0), front_x, [frame_inner],
-            f"{key} center support {layer_name.lower()}-to-inner-frame joint",
-            hidden_front_joint=True, finger_count=params.ShortJointFingers,
-            zero_receiver_overshoot=True,
-        )
+        source_bodies.append(_feature_body(feature))
+    part.Document.recompute()
+    _apply_drawer_joint(
+        source_bodies, App.Vector(0, 0, 1), HEIGHT - 2 * ply,
+        [_feature_body(layers[("Top", name)]) for name in ("Inner", "Outer")],
+        f"{key} center support to-top joint",
+    )
+    _apply_drawer_joint(
+        source_bodies, App.Vector(1, 0, 0), back_x,
+        [_feature_body(layers[("Back", name)]) for name in ("Inner", "Outer")],
+        f"{key} center support to-back joint",
+        finger_count=params.ShortJointFingers,
+    )
+    _apply_drawer_joint(
+        source_bodies, App.Vector(1, 0, 0), front_x, [frame_inner],
+        f"{key} center support to-inner-frame joint",
+        hidden_front_joint=True, finger_count=params.ShortJointFingers,
+        zero_receiver_overshoot=True,
+    )
 
 
 def add_wall_front_support(part, layers, key, x0, y0, color):
@@ -533,6 +471,7 @@ def add_wall_front_support(part, layers, key, x0, y0, color):
     params = part.Document.BedParameters
     ply = params.ply.Value
     height = params.WallFrontSupportHeight.Value
+    source_bodies = []
     for layer_name, y, y_expression in (
         ("Outer", y0 + WALL_DEPTH - ply,
          f"{y0 + WALL_DEPTH} mm - BedParameters.ply"),
@@ -548,7 +487,7 @@ def add_wall_front_support(part, layers, key, x0, y0, color):
             {
                 "X": f"{x0} mm + 2 * BedParameters.ply",
                 "Y": y_expression,
-                "Z": (f"{HEIGHT} mm - 2 * BedParameters.ply "
+                "Z": ("BedParameters.BedHeight - 2 * BedParameters.ply "
                       "- BedParameters.WallFrontSupportHeight"),
                 "Length": f"{DEPTH} mm - 4 * BedParameters.ply",
                 "Width": "BedParameters.ply",
@@ -556,23 +495,23 @@ def add_wall_front_support(part, layers, key, x0, y0, color):
             },
             color,
         )
-        part.Document.recompute()
-        body = _feature_body(feature)
+        source_bodies.append(_feature_body(feature))
+    part.Document.recompute()
+    _apply_drawer_joint(
+        source_bodies, App.Vector(0, 0, 1), HEIGHT - 2 * ply,
+        [_feature_body(layers[("Top", name)]) for name in ("Inner", "Outer")],
+        f"{key} front support to-top joint",
+    )
+    for side, coordinate in (
+        ("LeftSide", x0 + 2 * ply),
+        ("RightSide", x0 + DEPTH - 2 * ply),
+    ):
         _apply_drawer_joint(
-            body, App.Vector(0, 0, 1), HEIGHT - 2 * ply,
-            [_feature_body(layers[("Top", name)]) for name in ("Inner", "Outer")],
-            f"{key} front support {layer_name.lower()}-to-top joint",
+            source_bodies, App.Vector(1, 0, 0), coordinate,
+            [_feature_body(layers[(side, name)])
+             for name in ("Inner", "Outer")],
+            f"{key} front support to-{side} joint",
         )
-        for side, coordinate in (
-            ("LeftSide", x0 + 2 * ply),
-            ("RightSide", x0 + DEPTH - 2 * ply),
-        ):
-            _apply_drawer_joint(
-                body, App.Vector(1, 0, 0), coordinate,
-                [_feature_body(layers[(side, name)])
-                 for name in ("Inner", "Outer")],
-                f"{key} front support {layer_name.lower()}-to-{side} joint",
-            )
 
 
 def _drawer_layer(
@@ -807,7 +746,7 @@ def create_large_drawer(
     }
     component_expressions = {
         "FrameWidth": "30 in - 4 * BedParameters.ply",
-        "FrameHeight": "14 in - 4 * BedParameters.ply",
+        "FrameHeight": "BedParameters.BedHeight - 4 * BedParameters.ply",
         "Clearance": "BedParameters.DrawerClearance",
         "Ply": "BedParameters.ply",
         "DrawerBoxWidth": "BedParameters.LargeDrawerBoxWidth",
@@ -975,7 +914,7 @@ def create_large_drawer(
 
     slide_z_expression = (
         "2 * BedParameters.ply + "
-        "(14 in - 4 * BedParameters.ply - BedParameters.DrawerSlideWidth) / 2"
+        "(BedParameters.BedHeight - 4 * BedParameters.ply - BedParameters.DrawerSlideWidth) / 2"
     )
     slide_common = {
         "X": side_min_expr,
@@ -1224,8 +1163,8 @@ def create_large_drawer(
 
     doc.recompute()
     full_back = [back_inner, back_outer]
-    for side_name in ("LowOuter", "LowInner", "HighInner", "HighOuter"):
-        side = side_bodies[side_name]
+    for side_names in (("LowOuter", "LowInner"), ("HighInner", "HighOuter")):
+        side = [side_bodies[name] for name in side_names]
         _apply_drawer_joint(
             side,
             App.Vector(1, 0, 0),
@@ -1313,7 +1252,7 @@ def create_bedside_drawer(
     drawer.addProperty("App::PropertyString", "FrontDirection", "Drawer")
     drawer.FrontDirection = "-Y"
 
-    face_height_expr = "(14 in - 4 * BedParameters.ply) / 2"
+    face_height_expr = "(BedParameters.BedHeight - 4 * BedParameters.ply) / 2"
     face_z_expr = "2 * BedParameters.ply"
     if drawer_index:
         face_z_expr += " + " + face_height_expr
@@ -1368,7 +1307,7 @@ def create_bedside_drawer(
         }
         frame_expressions = {
             **component_expressions,
-            "FrameHeight": "14 in - 4 * BedParameters.ply",
+            "FrameHeight": "BedParameters.BedHeight - 4 * BedParameters.ply",
             "Thickness": "BedParameters.ply",
             "Y": f"{y0} mm",
             "Z": "2 * BedParameters.ply",
@@ -1786,8 +1725,8 @@ def create_bedside_drawer(
 
     doc.recompute()
     full_back = [back_inner, back_outer]
-    for side_name in ("LowOuter", "LowInner", "HighInner", "HighOuter"):
-        side = side_bodies[side_name]
+    for side_names in (("LowOuter", "LowInner"), ("HighInner", "HighOuter")):
+        side = [side_bodies[name] for name in side_names]
         _apply_drawer_joint(
             side,
             App.Vector(0, 1, 0),
@@ -2168,11 +2107,11 @@ def create_cabinet(doc, key, label, x0, y0, front_direction, color):
     # The top covers the cabinet; every vertical panel stops at its underside.
     layer("Top", "Outer", (x0, y0, HEIGHT - ply, DEPTH, WIDTH, ply), "Height", {
         "Height": "BedParameters.ply",
-        "Z": f"{HEIGHT} mm - BedParameters.ply",
+        "Z": "BedParameters.BedHeight - BedParameters.ply",
     })
     layer("Top", "Inner", (x0, y0, HEIGHT - 2 * ply, DEPTH, WIDTH, ply), "Height", {
         "Height": "BedParameters.ply",
-        "Z": f"{HEIGHT} mm - 2 * BedParameters.ply",
+        "Z": "BedParameters.BedHeight - 2 * BedParameters.ply",
     })
 
     side_x = x0
@@ -2181,7 +2120,7 @@ def create_cabinet(doc, key, label, x0, y0, front_direction, color):
     side_height = HEIGHT - 2 * ply
     side_expressions = {
         "Length": f"{DEPTH} mm",
-        "Height": f"{HEIGHT} mm - 2 * BedParameters.ply",
+        "Height": "BedParameters.BedHeight - 2 * BedParameters.ply",
         "X": side_x_expr,
     }
 
@@ -2217,14 +2156,14 @@ def create_cabinet(doc, key, label, x0, y0, front_direction, color):
     layer("Back", "Outer", (back_outer_x, back_y, back_z, ply, back_width, back_height), "Length", {
         **back_common,
         "Length": "BedParameters.ply",
-        "Height": f"{HEIGHT} mm - 4 * BedParameters.ply",
+        "Height": "BedParameters.BedHeight - 4 * BedParameters.ply",
         "X": outer_x_expr,
         "Z": "2 * BedParameters.ply",
     })
     layer("Back", "Inner", (back_inner_x, back_y, back_z, ply, back_width, back_height), "Length", {
         **back_common,
         "Length": "BedParameters.ply",
-        "Height": f"{HEIGHT} mm - 4 * BedParameters.ply",
+        "Height": "BedParameters.BedHeight - 4 * BedParameters.ply",
         "X": inner_x_expr,
         "Z": "2 * BedParameters.ply",
     })
@@ -2267,11 +2206,11 @@ def create_wall_cabinet(doc, key, label, x0, y0, color):
 
     layer("Top", "Outer", (x0, y0, HEIGHT - ply, DEPTH, WALL_DEPTH, ply), "Height", {
         "Height": "BedParameters.ply",
-        "Z": f"{HEIGHT} mm - BedParameters.ply",
+        "Z": "BedParameters.BedHeight - BedParameters.ply",
     })
     layer("Top", "Inner", (x0, y0, HEIGHT - 2 * ply, DEPTH, WALL_DEPTH, ply), "Height", {
         "Height": "BedParameters.ply",
-        "Z": f"{HEIGHT} mm - 2 * BedParameters.ply",
+        "Z": "BedParameters.BedHeight - 2 * BedParameters.ply",
     })
 
     side_y = y0
@@ -2279,7 +2218,7 @@ def create_wall_cabinet(doc, key, label, x0, y0, color):
     side_height = HEIGHT - 2 * ply
     common_side = {
         "Width": f"{WALL_DEPTH} mm",
-        "Height": f"{HEIGHT} mm - 2 * BedParameters.ply",
+        "Height": "BedParameters.BedHeight - 2 * BedParameters.ply",
         "Y": f"{y0} mm",
     }
     layer("LeftSide", "Outer", (x0, side_y, 0, ply, side_depth, side_height), "Length", {
@@ -2313,13 +2252,13 @@ def create_wall_cabinet(doc, key, label, x0, y0, color):
     layer("Back", "Outer", (back_x, y0, back_z, back_length, ply, back_height), "Width", {
         **back_common,
         "Width": "BedParameters.ply",
-        "Height": f"{HEIGHT} mm - 4 * BedParameters.ply",
+        "Height": "BedParameters.BedHeight - 4 * BedParameters.ply",
         "Z": "2 * BedParameters.ply",
     })
     layer("Back", "Inner", (back_x, y0 + ply, back_z, back_length, ply, back_height), "Width", {
         **back_common,
         "Width": "BedParameters.ply",
-        "Height": f"{HEIGHT} mm - 4 * BedParameters.ply",
+        "Height": "BedParameters.BedHeight - 4 * BedParameters.ply",
         "Y": f"{y0} mm + BedParameters.ply",
         "Z": "2 * BedParameters.ply",
     })
@@ -2365,11 +2304,11 @@ def create_bedside_cabinet(doc, key, label, x0, y0, color):
 
     layer("Top", "Outer", (x0, y0, HEIGHT - ply, BEDSIDE_SIZE, BEDSIDE_SIZE, ply), "Height", {
         "Height": "BedParameters.ply",
-        "Z": f"{HEIGHT} mm - BedParameters.ply",
+        "Z": "BedParameters.BedHeight - BedParameters.ply",
     })
     layer("Top", "Inner", (x0, y0, HEIGHT - 2 * ply, BEDSIDE_SIZE, BEDSIDE_SIZE, ply), "Height", {
         "Height": "BedParameters.ply",
-        "Z": f"{HEIGHT} mm - 2 * BedParameters.ply",
+        "Z": "BedParameters.BedHeight - 2 * BedParameters.ply",
     })
 
     side_y = y0
@@ -2377,7 +2316,7 @@ def create_bedside_cabinet(doc, key, label, x0, y0, color):
     side_height = HEIGHT - 2 * ply
     common_side = {
         "Width": f"{BEDSIDE_SIZE} mm",
-        "Height": f"{HEIGHT} mm - 2 * BedParameters.ply",
+        "Height": "BedParameters.BedHeight - 2 * BedParameters.ply",
         "Y": f"{y0} mm",
     }
     layer("LeftSide", "Outer", (x0, side_y, 0, ply, side_depth, side_height), "Length", {
@@ -2412,14 +2351,14 @@ def create_bedside_cabinet(doc, key, label, x0, y0, color):
     layer("Back", "Outer", (back_x, y0 + BEDSIDE_SIZE - ply, back_z, back_length, ply, back_height), "Width", {
         **back_common,
         "Width": "BedParameters.ply",
-        "Height": f"{HEIGHT} mm - 4 * BedParameters.ply",
+        "Height": "BedParameters.BedHeight - 4 * BedParameters.ply",
         "Y": f"{y0 + BEDSIDE_SIZE} mm - BedParameters.ply",
         "Z": "2 * BedParameters.ply",
     })
     layer("Back", "Inner", (back_x, y0 + BEDSIDE_SIZE - 2 * ply, back_z, back_length, ply, back_height), "Width", {
         **back_common,
         "Width": "BedParameters.ply",
-        "Height": f"{HEIGHT} mm - 4 * BedParameters.ply",
+        "Height": "BedParameters.BedHeight - 4 * BedParameters.ply",
         "Y": f"{y0 + BEDSIDE_SIZE} mm - 2 * BedParameters.ply",
         "Z": "2 * BedParameters.ply",
     })
@@ -2465,7 +2404,7 @@ def x_joint_bolt_holes(source, receiver, y_centers, z_center):
                 layer,
                 (layer.X.Value, y_center, z_center),
                 "X",
-                {"X": "X"},
+                {"X": "X", "Z": "BedParameters.BedHeight / 2"},
             )
 
 
@@ -2483,7 +2422,7 @@ def y_joint_bolt_holes(source, receiver, x_centers, z_center):
                 layer,
                 (x_center, layer.Y.Value, z_center),
                 "Y",
-                {"Y": "Y"},
+                {"Y": "Y", "Z": "BedParameters.BedHeight / 2"},
             )
 
 
@@ -2501,7 +2440,7 @@ def wall_row_bolt_holes(existing, wall_cabinet, x_centers, z_center):
                 layer,
                 (x_center, layer.Y.Value, z_center),
                 "Y",
-                {"Y": "Y"},
+                {"Y": "Y", "Z": "BedParameters.BedHeight / 2"},
             )
 
 
@@ -2519,7 +2458,7 @@ def wall_cabinet_pair_bolt_holes(left, right, y_centers, z_center):
                 layer,
                 (layer.X.Value, y_center, z_center),
                 "X",
-                {"X": "X"},
+                {"X": "X", "Z": "BedParameters.BedHeight / 2"},
             )
 
 
@@ -2537,13 +2476,24 @@ def bedside_bolt_holes(left, right, y_centers, z_center):
                 layer,
                 (layer.X.Value, y_center, z_center),
                 "X",
-                {"X": "X"},
+                {"X": "X", "Z": "BedParameters.BedHeight / 2"},
             )
 
 
 def generate(output_path):
+    global HEIGHT
+    # Rebuild geometry while carrying the saved variable set into the new model.
+    previous = App.openDocument(output_path) if os.path.exists(output_path) else None
     doc = App.newDocument("Bed")
-    add_parameters(doc)
+    if previous is not None:
+        params = previous.getObject("BedParameters")
+        if params is not None:
+            doc.copyObject(params)
+        App.closeDocument(previous.Name)
+    params = add_parameters(doc)
+    HEIGHT = params.BedHeight.Value
+    if not math.isfinite(HEIGHT) or HEIGHT <= 0:
+        raise ValueError("BedHeight must be a finite, positive length")
     if not os.path.exists(FILIGREE_SVG):
         raise FileNotFoundError(f"Filigree SVG not found: {FILIGREE_SVG}")
     if not os.path.exists(FILIGREE_IMAGE):

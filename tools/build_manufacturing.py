@@ -13,6 +13,7 @@ import zipfile
 import xml.etree.ElementTree as ET
 
 from shared_paths import design_system_root
+from freecad_runtime import invocation
 
 
 BED = Path(__file__).resolve().parent.parent
@@ -29,14 +30,19 @@ ARCHIVE = "bed_laser_layout_face_up_nested_vector_engraving.zip"
 def run(label, command, environment, log_dir):
     print(label, flush=True)
     log = log_dir / (label.lower().replace(" ", "_") + ".log")
+    if str(command[0]) == str(FREECAD):
+        command, environment = invocation(command[0], command[1], command[2:], environment)
     with log.open("w") as stream:
         result = subprocess.run(command, cwd=BED, env=environment,
                                 stdout=stream, stderr=subprocess.STDOUT)
     output = log.read_text(errors="replace")
-    if result.returncode or "Traceback (most recent call last)" in output:
+    if result.returncode or any(marker in output for marker in (
+        "Traceback (most recent call last)", "Exception while processing file:",
+        "During initialization the error",
+    )):
         raise RuntimeError(f"{label} failed (exit {result.returncode}):\n{output[-5000:]}")
     for line in output.splitlines():
-        if line.startswith(("DONE ", "NESTED_LAYOUT ", "GROUP_LAYOUT ", "BODY_METADATA ", "ENGRAVING_LINKS ",
+        if line.startswith(("DONE ", "NESTED_LAYOUT ", "GROUP_LAYOUT ", "BODY_METADATA ", "ENGRAVING_LINKS ", "DESIGN_SYSTEM_RUNTIME ",
                             "SVG_VECTORS ", "ENGRAVED ", "SHEETS_EXPORTED ")):
             print("  " + line, flush=True)
 
@@ -45,8 +51,8 @@ def readme(parameters, sheet_count, bodies, layout):
     stock_count = math.ceil(sheet_count / 3)
     return f"""BED LASER LAYOUT — FACE UP, NESTED DRAWER FACES
 
-Source: the saved Bed.FCStd with DrawerClearance = {parameters['drawer_clearance_mm']:g} mm
-and ply = {parameters['ply_mm']:g} mm.
+Source: the saved Bed.FCStd with BedHeight = {parameters['bed_height_mm'] / 25.4:g} in,
+DrawerClearance = {parameters['drawer_clearance_mm']:g} mm, and ply = {parameters['ply_mm']:g} mm.
 There is one DXF profile per final FreeCAD body ({bodies} total).
 
 FACE ORIENTATION
@@ -190,10 +196,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check-only", action="store_true",
                         help="Build and validate without replacing existing files")
+    parser.add_argument("--output-dir", type=Path,
+                        help="Publish to a separate folder instead of manufacturing/")
+    parser.add_argument("--model", type=Path, default=BED / "Bed.FCStd",
+                        help="Saved model to export (defaults to Bed.FCStd)")
     args = parser.parse_args()
+    destination = (args.output_dir or BED / "manufacturing").expanduser().resolve()
     if not FREECAD.is_file():
         parser.error(f"FreeCADCmd not found: {FREECAD}")
-    model = BED / "Bed.FCStd"
+    model = args.model.expanduser().resolve()
     if not model.is_file():
         parser.error(f"FreeCAD model not found: {model}")
 
@@ -250,8 +261,8 @@ def main():
         if args.check_only:
             print("Check only: existing manufacturing files were preserved.", flush=True)
             return
-        publish([(publication, BED / "manufacturing")])
-        print("Updated manufacturing/ from the current Bed.FCStd.", flush=True)
+        publish([(publication, destination)])
+        print(f"Updated {destination} from the current Bed.FCStd.", flush=True)
 
 
 if __name__ == "__main__":

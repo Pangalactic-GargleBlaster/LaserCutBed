@@ -608,7 +608,8 @@
   "model_parameter_object": "BedParameters",
   "model_parameter_fields": {
     "ply_mm": "ply",
-    "drawer_clearance_mm": "DrawerClearance"
+    "drawer_clearance_mm": "DrawerClearance",
+    "bed_height_mm": "BedHeight"
   },
   "mate_suffix_pairs": [
     [

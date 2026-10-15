@@ -15,15 +15,15 @@ SHEET LAYOUT
 Usable panel: 47 x 31 in = 1193.8 x 787.4 mm.
 On a 48 x 32 in blank, the nominal job origin is 12.7 mm from each physical
 edge. Check the actual blank and align manually.
-The layout uses 52 panels, requiring 18 full 4 x 8 ft sheets cut in thirds;
-2 of the available panels are unused.
+The layout uses 60 panels, requiring 20 full 4 x 8 ft sheets cut in thirds;
+0 of the available panels are unused.
 Independent part bounding boxes have at least 5 mm of spacing. Drawer faces
 are nested in their matching face-frame openings with at least
 25.2 mm of profile clearance. Ninety-degree rotations within the sheet are allowed;
 there are no flips or mirrors.
 The layout search minimizes the widest assembly span, then balances panel
 count against total span across laminate and cabinet/drawer side groups.
-The widest assembly spans 4 sheet positions.
+The widest assembly spans 2 sheet positions.
 
 COLORS
 Black/white (ACI 7): cut paths.
